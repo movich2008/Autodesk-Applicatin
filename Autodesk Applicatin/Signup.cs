@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Autodesk_Applicatin
 {
-    public partial class Form1 : Form
+    public partial class Signup : Form
     {
-        public Form1()
+        public Signup()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

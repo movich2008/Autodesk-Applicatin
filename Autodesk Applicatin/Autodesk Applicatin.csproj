@@ -46,16 +46,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CommentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CommentsForm.Designer.cs">
+      <DependentUpon>CommentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDashboard.Designer.cs">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationsForm.Designer.cs">
+      <DependentUpon>NotificationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModelDetails.Designer.cs">
+      <DependentUpon>ModelDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Projects Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Projects Form.Designer.cs">
+      <DependentUpon>Projects Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModeManagementForm.Designer.cs">
+      <DependentUpon>ModeManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagementForm.Designer.cs">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

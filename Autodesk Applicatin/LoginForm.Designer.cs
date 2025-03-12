@@ -1,6 +1,6 @@
 ﻿namespace Autodesk_Applicatin
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -43,6 +43,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtbxpassword
             // 
@@ -79,7 +80,7 @@
             this.LinkLableCreateAccount.TabStop = true;
             this.LinkLableCreateAccount.Text = "Create Account";
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +90,7 @@
             this.Controls.Add(this.txtbxUsername);
             this.Controls.Add(this.txtbxpassword);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
