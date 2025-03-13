@@ -108,6 +108,9 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainDashboard.resx">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModelDetails.resx">
       <DependentUpon>ModelDetails.cs</DependentUpon>
     </EmbeddedResource>
