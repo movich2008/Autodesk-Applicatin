@@ -16,5 +16,10 @@ namespace Autodesk_Applicatin
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
