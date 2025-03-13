@@ -31,5 +31,12 @@ namespace Autodesk_Applicatin
         {
 
         }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e) { 
+        
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }
