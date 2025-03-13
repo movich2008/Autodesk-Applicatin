@@ -37,7 +37,29 @@ namespace Autodesk_Applicatin
                     }
                         return dt;
                 }
-                public static object ExecuteScalar(string query, params SQLiteParameter[] parameters)
+
+                public static int ExecuteNonQuery(string query, params SQLiteParameter[] parameters)
+                {
+                    int rowsAffected = 0;
+                    using (SQLiteConnection conn = new SQLiteConnection(connection))
+                    {
+                        try
+                        {
+                            conn.Open();
+                            using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                            {
+                                if (parameters != null) cmd.Parameters.AddRange(parameters);
+                                rowsAffected = cmd.ExecuteNonQuery();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Database error: " + ex.Message);
+                        }
+                    }
+                    return rowsAffected;
+                }
+        public static object ExecuteScalar(string query, params SQLiteParameter[] parameters)
                 {
                     object result = null;
                     using (SQLiteConnection conn = new SQLiteConnection(connection))
