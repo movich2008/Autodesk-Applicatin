@@ -59,6 +59,7 @@
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(177, 20);
             this.txtbxUsername.TabIndex = 2;
+            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
             // label1
             // 
