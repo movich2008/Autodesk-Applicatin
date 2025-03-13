@@ -82,15 +82,15 @@
             // 
             // btnCreateAccount
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(272, 548);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(249, 37);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Create Account";
-            this.button2.UseVisualStyleBackColor = false;
+            //this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            //this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            //this.button2.Location = new System.Drawing.Point(272, 548);
+            //this.button2.Name = "button2";
+            //this.button2.Size = new System.Drawing.Size(249, 37);
+            //this.button2.TabIndex = 4;
+            //this.button2.Text = "Create Account";
+            //this.button2.UseVisualStyleBackColor = false;
             // 
             // contextMenuStrip1
             // 
