@@ -251,7 +251,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Location = new System.Drawing.Point(833, 16);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 37);
+            this.label12.Size = new System.Drawing.Size(31, 26);
             this.label12.TabIndex = 16;
             this.label12.Text = "🇬🇧";
             // 
@@ -262,7 +262,7 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(730, 22);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 29);
+            this.label14.Size = new System.Drawing.Size(57, 20);
             this.label14.TabIndex = 15;
             this.label14.Text = "Sign in";
             // 
@@ -273,7 +273,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(648, 16);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 37);
+            this.label11.Size = new System.Drawing.Size(37, 26);
             this.label11.TabIndex = 14;
             this.label11.Text = "🛒";
             // 
@@ -281,7 +281,7 @@
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(125, 16);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(211, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(211, 20);
             this.maskedTextBox1.TabIndex = 13;
             // 
             // label10
@@ -292,7 +292,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(342, 13);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 29);
+            this.label10.Size = new System.Drawing.Size(18, 20);
             this.label10.TabIndex = 12;
             this.label10.Text = "⌕";
             // 
@@ -304,7 +304,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(3, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 29);
+            this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 11;
             this.label9.Text = "AutoDesk";
             // 
