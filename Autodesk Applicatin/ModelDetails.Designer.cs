@@ -35,10 +35,10 @@
             this.txtbxCreatedOn = new System.Windows.Forms.Label();
             this.txtvxModifiedOn = new System.Windows.Forms.Label();
             this.txtbxDimensions = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBxPreview = new System.Windows.Forms.PictureBox();
             this.txtbxSaveDetails = new System.Windows.Forms.Button();
             this.txtxbxUploadImage = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,11 +56,11 @@
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpCreatedOn = new System.Windows.Forms.DateTimePicker();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpModifiedOn = new System.Windows.Forms.DateTimePicker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxPreview)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -142,13 +142,13 @@
             this.txtbxDimensions.TabIndex = 6;
             this.txtbxDimensions.Text = "Dimensions";
             // 
-            // textBox1
+            // txtBoxFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 99);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtBoxFirstName.Location = new System.Drawing.Point(105, 99);
+            this.txtBoxFirstName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBoxFirstName.Name = "txtBoxFirstName";
+            this.txtBoxFirstName.Size = new System.Drawing.Size(171, 20);
+            this.txtBoxFirstName.TabIndex = 7;
             // 
             // textBox2
             // 
@@ -167,14 +167,14 @@
             this.textBox6.Size = new System.Drawing.Size(171, 20);
             this.textBox6.TabIndex = 12;
             // 
-            // pictureBox1
+            // picBxPreview
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(404, 128);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 190);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.picBxPreview.Location = new System.Drawing.Point(404, 128);
+            this.picBxPreview.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.picBxPreview.Name = "picBxPreview";
+            this.picBxPreview.Size = new System.Drawing.Size(200, 190);
+            this.picBxPreview.TabIndex = 13;
+            this.picBxPreview.TabStop = false;
             // 
             // txtbxSaveDetails
             // 
@@ -381,14 +381,14 @@
             this.label18.TabIndex = 11;
             this.label18.Text = "AutoDesk";
             // 
-            // dateTimePicker1
+            // dtpCreatedOn
             // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 227);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(154, 20);
-            this.dateTimePicker1.TabIndex = 18;
+            this.dtpCreatedOn.CustomFormat = "dd-MM-yyy";
+            this.dtpCreatedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCreatedOn.Location = new System.Drawing.Point(105, 227);
+            this.dtpCreatedOn.Name = "dtpCreatedOn";
+            this.dtpCreatedOn.Size = new System.Drawing.Size(154, 20);
+            this.dtpCreatedOn.TabIndex = 18;
             // 
             // textBox3
             // 
@@ -398,14 +398,14 @@
             this.textBox3.Size = new System.Drawing.Size(171, 20);
             this.textBox3.TabIndex = 9;
             // 
-            // dateTimePicker2
+            // dtpModifiedOn
             // 
-            this.dateTimePicker2.CustomFormat = "dd-MM-yyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(105, 264);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
-            this.dateTimePicker2.TabIndex = 18;
+            this.dtpModifiedOn.CustomFormat = "dd-MM-yyy";
+            this.dtpModifiedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpModifiedOn.Location = new System.Drawing.Point(105, 264);
+            this.dtpModifiedOn.Name = "dtpModifiedOn";
+            this.dtpModifiedOn.Size = new System.Drawing.Size(154, 20);
+            this.dtpModifiedOn.TabIndex = 18;
             // 
             // openFileDialog1
             // 
@@ -417,18 +417,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(659, 430);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpModifiedOn);
+            this.Controls.Add(this.dtpCreatedOn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtxbxUploadImage);
             this.Controls.Add(this.txtbxSaveDetails);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBxPreview);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxFirstName);
             this.Controls.Add(this.txtbxDimensions);
             this.Controls.Add(this.txtvxModifiedOn);
             this.Controls.Add(this.txtbxCreatedOn);
@@ -439,7 +439,7 @@
             this.Name = "ModelDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModelDetails";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxPreview)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -458,10 +458,10 @@
         private System.Windows.Forms.Label txtbxCreatedOn;
         private System.Windows.Forms.Label txtvxModifiedOn;
         private System.Windows.Forms.Label txtbxDimensions;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxFirstName;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBxPreview;
         private System.Windows.Forms.Button txtbxSaveDetails;
         private System.Windows.Forms.Button txtxbxUploadImage;
         private System.Windows.Forms.Label label8;
@@ -479,9 +479,9 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpCreatedOn;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpModifiedOn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

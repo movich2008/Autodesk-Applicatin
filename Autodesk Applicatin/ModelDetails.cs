@@ -28,7 +28,7 @@ namespace Autodesk_Applicatin
         private void txtbxSaveDetails_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) ||
+            if (string.IsNullOrWhiteSpace(txtBoxFirstName.Text) || string.IsNullOrWhiteSpace(textBox2.Text) ||
                 string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
             {
                 MessageBox.Show("Please fill in all fields.", "Validation Error", MessageBoxButtons.OK,
@@ -38,13 +38,13 @@ namespace Autodesk_Applicatin
 
             Model model = new Model
             {
-                ModelName = textBox1.Text,
+                ModelName = txtBoxFirstName.Text,
                 Description = textBox2.Text,
                 FileFormat = textBox3.Text,
-                CreatedOn = dateTimePicker1.Value,
-                ModifiedOn = dateTimePicker2.Value, 
+                CreatedOn = dtpCreatedOn.Value,
+                ModifiedOn = dtpModifiedOn.Value, 
                 Dimensions = textBox6.Text,
-                ImagePath = pictureBox1.ImageLocation 
+                ImagePath = picBxPreview.ImageLocation 
             };
 
         }
@@ -57,10 +57,10 @@ namespace Autodesk_Applicatin
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    picBxPreview.Image = Image.FromFile(openFileDialog.FileName);
 
 
-                    pictureBox1.ImageLocation = openFileDialog.FileName;
+                    picBxPreview.ImageLocation = openFileDialog.FileName;
                 }
             }
         }
