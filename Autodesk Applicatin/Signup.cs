@@ -24,6 +24,11 @@ namespace Autodesk_Applicatin
             this.Hide();
         }
 
-
+        private void txtbxLogInHere_Click(object sender, EventArgs e)
+        {
+            LoginForm txtbxLogInHere = new LoginForm();
+            txtbxLogInHere.Show();
+            this.Hide();
+        }
     }
 }
