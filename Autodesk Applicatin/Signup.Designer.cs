@@ -79,7 +79,7 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.Location = new System.Drawing.Point(926, 35);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 26);
+            this.label13.Size = new System.Drawing.Size(37, 31);
             this.label13.TabIndex = 16;
             this.label13.Text = "🇬🇧";
             // 
@@ -90,7 +90,7 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(814, 43);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 20);
+            this.label15.Size = new System.Drawing.Size(72, 25);
             this.label15.TabIndex = 15;
             this.label15.Text = "Sign in";
             // 
@@ -101,7 +101,7 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(722, 37);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 26);
+            this.label16.Size = new System.Drawing.Size(46, 31);
             this.label16.TabIndex = 14;
             this.label16.Text = "🛒";
             // 
@@ -109,7 +109,7 @@
             // 
             this.maskedTextBox2.Location = new System.Drawing.Point(125, 16);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(211, 20);
+            this.maskedTextBox2.Size = new System.Drawing.Size(211, 22);
             this.maskedTextBox2.TabIndex = 13;
             // 
             // label17
@@ -120,7 +120,7 @@
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(342, 13);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(18, 20);
+            this.label17.Size = new System.Drawing.Size(23, 25);
             this.label17.TabIndex = 12;
             this.label17.Text = "⌕";
             // 
@@ -132,7 +132,7 @@
             this.label18.ForeColor = System.Drawing.SystemColors.Control;
             this.label18.Location = new System.Drawing.Point(-5, 16);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 20);
+            this.label18.Size = new System.Drawing.Size(98, 25);
             this.label18.TabIndex = 11;
             this.label18.Text = "AutoDesk";
             // 
@@ -142,7 +142,7 @@
             this.txtbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxFirstName.Location = new System.Drawing.Point(188, 254);
             this.txtbxFirstName.Name = "txtbxFirstName";
-            this.txtbxFirstName.Size = new System.Drawing.Size(84, 20);
+            this.txtbxFirstName.Size = new System.Drawing.Size(103, 25);
             this.txtbxFirstName.TabIndex = 19;
             this.txtbxFirstName.Text = "First name";
             // 
@@ -152,7 +152,7 @@
             this.txtbxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxLastName.Location = new System.Drawing.Point(408, 254);
             this.txtbxLastName.Name = "txtbxLastName";
-            this.txtbxLastName.Size = new System.Drawing.Size(84, 20);
+            this.txtbxLastName.Size = new System.Drawing.Size(103, 25);
             this.txtbxLastName.TabIndex = 20;
             this.txtbxLastName.Text = "Last name";
             // 
@@ -162,7 +162,7 @@
             this.txtbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxEmail.Location = new System.Drawing.Point(189, 367);
             this.txtbxEmail.Name = "txtbxEmail";
-            this.txtbxEmail.Size = new System.Drawing.Size(48, 20);
+            this.txtbxEmail.Size = new System.Drawing.Size(60, 25);
             this.txtbxEmail.TabIndex = 21;
             this.txtbxEmail.Text = "Email";
             // 
@@ -172,7 +172,7 @@
             this.txtbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxUsername.Location = new System.Drawing.Point(189, 309);
             this.txtbxUsername.Name = "txtbxUsername";
-            this.txtbxUsername.Size = new System.Drawing.Size(83, 20);
+            this.txtbxUsername.Size = new System.Drawing.Size(102, 25);
             this.txtbxUsername.TabIndex = 22;
             this.txtbxUsername.Text = "Username";
             // 
@@ -182,7 +182,7 @@
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(559, 89);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(93, 26);
+            this.label22.Size = new System.Drawing.Size(112, 31);
             this.label22.TabIndex = 23;
             this.label22.Text = "Sign up";
             // 
@@ -192,7 +192,7 @@
             this.txtbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxPassword.Location = new System.Drawing.Point(194, 438);
             this.txtbxPassword.Name = "txtbxPassword";
-            this.txtbxPassword.Size = new System.Drawing.Size(78, 20);
+            this.txtbxPassword.Size = new System.Drawing.Size(98, 25);
             this.txtbxPassword.TabIndex = 24;
             this.txtbxPassword.Text = "Password";
             // 
@@ -200,35 +200,35 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(0, 0);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
             this.textBox7.TabIndex = 36;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(412, 277);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(188, 20);
+            this.textBox8.Size = new System.Drawing.Size(188, 22);
             this.textBox8.TabIndex = 26;
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(192, 332);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(408, 20);
+            this.textBox9.Size = new System.Drawing.Size(408, 22);
             this.textBox9.TabIndex = 27;
             // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(192, 390);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(408, 20);
+            this.textBox10.Size = new System.Drawing.Size(408, 22);
             this.textBox10.TabIndex = 28;
             // 
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(198, 473);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(402, 20);
+            this.textBox11.Size = new System.Drawing.Size(402, 22);
             this.textBox11.TabIndex = 29;
             // 
             // txtbxConfirmPassword
@@ -237,7 +237,7 @@
             this.txtbxConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxConfirmPassword.Location = new System.Drawing.Point(194, 512);
             this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
-            this.txtbxConfirmPassword.Size = new System.Drawing.Size(136, 20);
+            this.txtbxConfirmPassword.Size = new System.Drawing.Size(169, 25);
             this.txtbxConfirmPassword.TabIndex = 30;
             this.txtbxConfirmPassword.Text = "Confirm password";
             // 
@@ -245,7 +245,7 @@
             // 
             this.textBox12.Location = new System.Drawing.Point(198, 535);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(402, 20);
+            this.textBox12.Size = new System.Drawing.Size(402, 22);
             this.textBox12.TabIndex = 31;
             // 
             // txtbxSubmit
@@ -259,6 +259,7 @@
             this.txtbxSubmit.TabIndex = 32;
             this.txtbxSubmit.Text = "Submit";
             this.txtbxSubmit.UseVisualStyleBackColor = false;
+            this.txtbxSubmit.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // label25
             // 
@@ -266,7 +267,7 @@
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(194, 168);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(197, 20);
+            this.label25.Size = new System.Drawing.Size(244, 25);
             this.label25.TabIndex = 33;
             this.label25.Text = "Create your account below";
             // 
@@ -276,7 +277,7 @@
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(594, 168);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(192, 20);
+            this.label26.Size = new System.Drawing.Size(239, 25);
             this.label26.TabIndex = 34;
             this.label26.Text = "Already have an account?";
             // 
@@ -284,18 +285,19 @@
             // 
             this.txtbxLogInHere.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtbxLogInHere.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtbxLogInHere.Location = new System.Drawing.Point(805, 164);
+            this.txtbxLogInHere.Location = new System.Drawing.Point(839, 163);
             this.txtbxLogInHere.Name = "txtbxLogInHere";
             this.txtbxLogInHere.Size = new System.Drawing.Size(79, 30);
             this.txtbxLogInHere.TabIndex = 35;
             this.txtbxLogInHere.Text = "[Log in here]";
             this.txtbxLogInHere.UseVisualStyleBackColor = false;
+            this.txtbxLogInHere.Click += new System.EventHandler(this.txtbxLogInHere_Click);
             // 
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(192, 277);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(188, 20);
+            this.textBox13.Size = new System.Drawing.Size(188, 22);
             this.textBox13.TabIndex = 26;
             // 
             // Signup
