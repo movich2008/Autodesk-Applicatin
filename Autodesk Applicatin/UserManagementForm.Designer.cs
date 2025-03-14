@@ -32,19 +32,19 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtbxClearForm = new System.Windows.Forms.Button();
+            this.txtbxDeleteUser = new System.Windows.Forms.Button();
+            this.txtbxEditUser = new System.Windows.Forms.Button();
+            this.txtbxAddUser = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtbxUserID = new System.Windows.Forms.TextBox();
+            this.txtbxStatus = new System.Windows.Forms.Label();
+            this.txtbxRole = new System.Windows.Forms.Label();
+            this.txtbxEmail = new System.Windows.Forms.Label();
+            this.txtbxName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -99,19 +99,19 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.txtbxClearForm);
+            this.groupBox1.Controls.Add(this.txtbxDeleteUser);
+            this.groupBox1.Controls.Add(this.txtbxEditUser);
+            this.groupBox1.Controls.Add(this.txtbxAddUser);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtbxUserID);
+            this.groupBox1.Controls.Add(this.txtbxStatus);
+            this.groupBox1.Controls.Add(this.txtbxRole);
+            this.groupBox1.Controls.Add(this.txtbxEmail);
+            this.groupBox1.Controls.Add(this.txtbxName);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(564, 138);
             this.groupBox1.Name = "groupBox1";
@@ -120,49 +120,49 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Delete User";
             // 
-            // button4
+            // txtbxClearForm
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(150, 488);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 39);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Clear Form";
-            this.button4.UseVisualStyleBackColor = false;
+            this.txtbxClearForm.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtbxClearForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtbxClearForm.Location = new System.Drawing.Point(150, 488);
+            this.txtbxClearForm.Name = "txtbxClearForm";
+            this.txtbxClearForm.Size = new System.Drawing.Size(122, 39);
+            this.txtbxClearForm.TabIndex = 12;
+            this.txtbxClearForm.Text = "Clear Form";
+            this.txtbxClearForm.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // txtbxDeleteUser
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(301, 304);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 39);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Delete User";
-            this.button3.UseVisualStyleBackColor = false;
+            this.txtbxDeleteUser.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtbxDeleteUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtbxDeleteUser.Location = new System.Drawing.Point(301, 304);
+            this.txtbxDeleteUser.Name = "txtbxDeleteUser";
+            this.txtbxDeleteUser.Size = new System.Drawing.Size(122, 39);
+            this.txtbxDeleteUser.TabIndex = 11;
+            this.txtbxDeleteUser.Text = "Delete User";
+            this.txtbxDeleteUser.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // txtbxEditUser
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(150, 410);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 39);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Edit User";
-            this.button2.UseVisualStyleBackColor = false;
+            this.txtbxEditUser.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtbxEditUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtbxEditUser.Location = new System.Drawing.Point(150, 410);
+            this.txtbxEditUser.Name = "txtbxEditUser";
+            this.txtbxEditUser.Size = new System.Drawing.Size(122, 39);
+            this.txtbxEditUser.TabIndex = 10;
+            this.txtbxEditUser.Text = "Edit User";
+            this.txtbxEditUser.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // txtbxAddUser
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(0, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 39);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Add User";
-            this.button1.UseVisualStyleBackColor = false;
+            this.txtbxAddUser.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtbxAddUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtbxAddUser.Location = new System.Drawing.Point(0, 304);
+            this.txtbxAddUser.Name = "txtbxAddUser";
+            this.txtbxAddUser.Size = new System.Drawing.Size(122, 39);
+            this.txtbxAddUser.TabIndex = 7;
+            this.txtbxAddUser.Text = "Add User";
+            this.txtbxAddUser.UseVisualStyleBackColor = false;
             // 
             // textBox5
             // 
@@ -192,49 +192,49 @@
             this.textBox2.Size = new System.Drawing.Size(186, 26);
             this.textBox2.TabIndex = 6;
             // 
-            // textBox1
+            // txtbxUserID
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtbxUserID.Location = new System.Drawing.Point(115, 40);
+            this.txtbxUserID.Name = "txtbxUserID";
+            this.txtbxUserID.Size = new System.Drawing.Size(186, 26);
+            this.txtbxUserID.TabIndex = 5;
             // 
-            // label8
+            // txtbxStatus
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(-4, 224);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Status:";
+            this.txtbxStatus.AutoSize = true;
+            this.txtbxStatus.Location = new System.Drawing.Point(-4, 224);
+            this.txtbxStatus.Name = "txtbxStatus";
+            this.txtbxStatus.Size = new System.Drawing.Size(60, 20);
+            this.txtbxStatus.TabIndex = 4;
+            this.txtbxStatus.Text = "Status:";
             // 
-            // label7
+            // txtbxRole
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-4, 175);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 20);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Role:";
+            this.txtbxRole.AutoSize = true;
+            this.txtbxRole.Location = new System.Drawing.Point(-4, 175);
+            this.txtbxRole.Name = "txtbxRole";
+            this.txtbxRole.Size = new System.Drawing.Size(46, 20);
+            this.txtbxRole.TabIndex = 3;
+            this.txtbxRole.Text = "Role:";
             // 
-            // label6
+            // txtbxEmail
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-4, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Email:";
+            this.txtbxEmail.AutoSize = true;
+            this.txtbxEmail.Location = new System.Drawing.Point(-4, 127);
+            this.txtbxEmail.Name = "txtbxEmail";
+            this.txtbxEmail.Size = new System.Drawing.Size(52, 20);
+            this.txtbxEmail.TabIndex = 2;
+            this.txtbxEmail.Text = "Email:";
             // 
-            // label5
+            // txtbxName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-4, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Name:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.txtbxName.AutoSize = true;
+            this.txtbxName.Location = new System.Drawing.Point(-4, 83);
+            this.txtbxName.Name = "txtbxName";
+            this.txtbxName.Size = new System.Drawing.Size(55, 20);
+            this.txtbxName.TabIndex = 1;
+            this.txtbxName.Text = "Name:";
+            this.txtbxName.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -368,16 +368,16 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtbxUserID;
+        private System.Windows.Forms.Label txtbxStatus;
+        private System.Windows.Forms.Label txtbxRole;
+        private System.Windows.Forms.Label txtbxEmail;
+        private System.Windows.Forms.Label txtbxName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button txtbxDeleteUser;
+        private System.Windows.Forms.Button txtbxEditUser;
+        private System.Windows.Forms.Button txtbxAddUser;
+        private System.Windows.Forms.Button txtbxClearForm;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label10;

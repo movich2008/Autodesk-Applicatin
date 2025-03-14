@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.TxtbxModelName = new System.Windows.Forms.Label();
+            this.TxtbxDescription = new System.Windows.Forms.Label();
+            this.TxtbxFileFormat = new System.Windows.Forms.Label();
+            this.txtbxCreatedOn = new System.Windows.Forms.Label();
+            this.txtvxModifiedOn = new System.Windows.Forms.Label();
+            this.txtbxDimensions = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -42,8 +42,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtbxSaveDetails = new System.Windows.Forms.Button();
+            this.txtxbxUploadImage = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -74,65 +74,65 @@
             this.label1.TabIndex = 0;
             this.label1.Text = " Model Details";
             // 
-            // label2
+            // TxtbxModelName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Model Name";
+            this.TxtbxModelName.AutoSize = true;
+            this.TxtbxModelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtbxModelName.Location = new System.Drawing.Point(15, 152);
+            this.TxtbxModelName.Name = "TxtbxModelName";
+            this.TxtbxModelName.Size = new System.Drawing.Size(123, 25);
+            this.TxtbxModelName.TabIndex = 1;
+            this.TxtbxModelName.Text = "Model Name";
             // 
-            // label3
+            // TxtbxDescription
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Description";
+            this.TxtbxDescription.AutoSize = true;
+            this.TxtbxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtbxDescription.Location = new System.Drawing.Point(20, 213);
+            this.TxtbxDescription.Name = "TxtbxDescription";
+            this.TxtbxDescription.Size = new System.Drawing.Size(109, 25);
+            this.TxtbxDescription.TabIndex = 2;
+            this.TxtbxDescription.Text = "Description";
             // 
-            // label4
+            // TxtbxFileFormat
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 285);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "File Format";
+            this.TxtbxFileFormat.AutoSize = true;
+            this.TxtbxFileFormat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtbxFileFormat.Location = new System.Drawing.Point(15, 285);
+            this.TxtbxFileFormat.Name = "TxtbxFileFormat";
+            this.TxtbxFileFormat.Size = new System.Drawing.Size(109, 25);
+            this.TxtbxFileFormat.TabIndex = 3;
+            this.TxtbxFileFormat.Text = "File Format";
             // 
-            // label5
+            // txtbxCreatedOn
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 350);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Created on";
+            this.txtbxCreatedOn.AutoSize = true;
+            this.txtbxCreatedOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxCreatedOn.Location = new System.Drawing.Point(12, 350);
+            this.txtbxCreatedOn.Name = "txtbxCreatedOn";
+            this.txtbxCreatedOn.Size = new System.Drawing.Size(109, 25);
+            this.txtbxCreatedOn.TabIndex = 4;
+            this.txtbxCreatedOn.Text = "Created on";
             // 
-            // label6
+            // txtvxModifiedOn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 412);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 25);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Modified On";
+            this.txtvxModifiedOn.AutoSize = true;
+            this.txtvxModifiedOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtvxModifiedOn.Location = new System.Drawing.Point(11, 412);
+            this.txtvxModifiedOn.Name = "txtvxModifiedOn";
+            this.txtvxModifiedOn.Size = new System.Drawing.Size(118, 25);
+            this.txtvxModifiedOn.TabIndex = 5;
+            this.txtvxModifiedOn.Text = "Modified On";
             // 
-            // label7
+            // txtbxDimensions
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 483);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 25);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Dimensions";
+            this.txtbxDimensions.AutoSize = true;
+            this.txtbxDimensions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxDimensions.Location = new System.Drawing.Point(15, 483);
+            this.txtbxDimensions.Name = "txtbxDimensions";
+            this.txtbxDimensions.Size = new System.Drawing.Size(114, 25);
+            this.txtbxDimensions.TabIndex = 6;
+            this.txtbxDimensions.Text = "Dimensions";
             // 
             // textBox1
             // 
@@ -185,44 +185,44 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(617, 267);
+            this.pictureBox1.Location = new System.Drawing.Point(606, 197);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 262);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 292);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // txtbxSaveDetails
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(216, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 56);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Save Details";
-            this.button1.UseVisualStyleBackColor = false;
+            this.txtbxSaveDetails.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtbxSaveDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxSaveDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtbxSaveDetails.Location = new System.Drawing.Point(175, 568);
+            this.txtbxSaveDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbxSaveDetails.Name = "txtbxSaveDetails";
+            this.txtbxSaveDetails.Size = new System.Drawing.Size(165, 56);
+            this.txtbxSaveDetails.TabIndex = 14;
+            this.txtbxSaveDetails.Text = "Save Details";
+            this.txtbxSaveDetails.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // txtxbxUploadImage
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(672, 573);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 56);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Upload Image";
-            this.button2.UseVisualStyleBackColor = false;
+            this.txtxbxUploadImage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtxbxUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtxbxUploadImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtxbxUploadImage.Location = new System.Drawing.Point(667, 545);
+            this.txtxbxUploadImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtxbxUploadImage.Name = "txtxbxUploadImage";
+            this.txtxbxUploadImage.Size = new System.Drawing.Size(165, 56);
+            this.txtxbxUploadImage.TabIndex = 15;
+            this.txtxbxUploadImage.Text = "Upload Image";
+            this.txtxbxUploadImage.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(679, 225);
+            this.label8.Location = new System.Drawing.Point(692, 140);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 25);
             this.label8.TabIndex = 16;
@@ -395,8 +395,8 @@
             this.ClientSize = new System.Drawing.Size(989, 662);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtxbxUploadImage);
+            this.Controls.Add(this.txtbxSaveDetails);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label1);
@@ -405,12 +405,12 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtbxDimensions);
+            this.Controls.Add(this.txtvxModifiedOn);
+            this.Controls.Add(this.txtbxCreatedOn);
+            this.Controls.Add(this.TxtbxFileFormat);
+            this.Controls.Add(this.TxtbxDescription);
+            this.Controls.Add(this.TxtbxModelName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ModelDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -428,12 +428,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label TxtbxModelName;
+        private System.Windows.Forms.Label TxtbxDescription;
+        private System.Windows.Forms.Label TxtbxFileFormat;
+        private System.Windows.Forms.Label txtbxCreatedOn;
+        private System.Windows.Forms.Label txtvxModifiedOn;
+        private System.Windows.Forms.Label txtbxDimensions;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -441,8 +441,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button txtbxSaveDetails;
+        private System.Windows.Forms.Button txtxbxUploadImage;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
