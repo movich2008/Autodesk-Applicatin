@@ -17,21 +17,6 @@ namespace Autodesk_Applicatin
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreateAccount_Click(object sender, EventArgs e) { 
         
             LoginForm loginForm = new LoginForm();
@@ -39,9 +24,6 @@ namespace Autodesk_Applicatin
             this.Hide();
         }
 
-        private void Signup_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

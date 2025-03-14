@@ -1,10 +1,12 @@
 ﻿namespace Autodesk_Applicatin
 {
-    partial class CommentsForm
+     public  partial class CommentsForm 
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
+        /// 
+
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -149,7 +151,7 @@
             this.label2.Size = new System.Drawing.Size(241, 29);
             this.label2.TabIndex = 14;
             this.label2.Text = "Add a comment here:";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            //this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 

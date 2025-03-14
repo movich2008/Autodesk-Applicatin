@@ -23,9 +23,6 @@ namespace Autodesk_Applicatin
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

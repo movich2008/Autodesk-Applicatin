@@ -197,13 +197,13 @@
             // 
             // textBox7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(111, 346);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 25);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Password";
+            //this.label5.AutoSize = true;
+            //this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.label5.Location = new System.Drawing.Point(111, 346);
+            //this.label5.Name = "label5";
+            //this.label5.Size = new System.Drawing.Size(98, 25);
+            //this.label5.TabIndex = 13;
+            //this.label5.Text = "Password";
             // 
             // textBox8
             // 
@@ -317,7 +317,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "Signup";
             this.Text = "Password";
-            this.Load += new System.EventHandler(this.Signup_Load);
+            //this.Load += new System.EventHandler(this.Signup_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

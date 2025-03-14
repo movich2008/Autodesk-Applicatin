@@ -59,7 +59,7 @@
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(177, 20);
             this.txtbxUsername.TabIndex = 2;
-            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
+            //this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
             // label1
             // 
@@ -104,7 +104,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            //this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -57,14 +57,14 @@ namespace Autodesk_Applicatin
             this.Hide();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
+        //private void LoginForm_Load(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txtbxUsername_TextChanged(object sender, EventArgs e)
-        {
+        //private void txtbxUsername_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

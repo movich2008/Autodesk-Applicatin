@@ -465,13 +465,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label8);
+//            this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
+//            this.Controls.Add(this.label7);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label6);
+ //           this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
+ //           this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UserManagementForm";
