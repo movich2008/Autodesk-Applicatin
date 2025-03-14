@@ -38,5 +38,10 @@ namespace Autodesk_Applicatin
             loginForm.Show();
             this.Hide();
         }
+
+        private void Signup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
