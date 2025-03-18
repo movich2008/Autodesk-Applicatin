@@ -68,6 +68,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -83,11 +84,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommentsForm.cs">
+    <Compile Include="Support Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CommentsForm.Designer.cs">
-      <DependentUpon>CommentsForm.cs</DependentUpon>
+    <Compile Include="Support Form.Designer.cs">
+      <DependentUpon>Support Form.cs</DependentUpon>
     </Compile>
     <Compile Include="DataHelper.cs" />
     <Compile Include="MainDashboard.cs">
@@ -140,8 +141,8 @@
     <Compile Include="UserManagementForm.Designer.cs">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CommentsForm.resx">
-      <DependentUpon>CommentsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Support Form.resx">
+      <DependentUpon>Support Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -238,6 +239,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autodesk-logo-black-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autodesk-logo-black-transparent1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
