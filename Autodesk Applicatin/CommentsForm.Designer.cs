@@ -151,7 +151,6 @@
             this.label2.Size = new System.Drawing.Size(241, 29);
             this.label2.TabIndex = 14;
             this.label2.Text = "Add a comment here:";
-            //this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
@@ -263,7 +262,7 @@
             // CommentsForm
             // 
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(974, 679);
+            this.ClientSize = new System.Drawing.Size(1013, 679);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
