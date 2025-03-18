@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModeManagementForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aUTODESKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtFile = new System.Windows.Forms.TextBox();
+            this.txtTags = new System.Windows.Forms.TextBox();
+            this.txtSummary = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +81,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
@@ -89,6 +90,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(562, 528);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Autodesk_Applicatin.Properties.Resources.folder_upload;
+            this.pictureBox2.Location = new System.Drawing.Point(26, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 72);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // button4
             // 
@@ -130,35 +140,26 @@
             this.button1.Text = "Drag or Upload files";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // txtFile
             // 
-            this.button5.Location = new System.Drawing.Point(237, 686);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 35);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
+            this.txtFile.Location = new System.Drawing.Point(790, 196);
+            this.txtFile.Name = "txtFile";
+            this.txtFile.Size = new System.Drawing.Size(249, 26);
+            this.txtFile.TabIndex = 5;
             // 
-            // textBox1
+            // txtTags
             // 
-            this.textBox1.Location = new System.Drawing.Point(790, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtTags.Location = new System.Drawing.Point(790, 406);
+            this.txtTags.Name = "txtTags";
+            this.txtTags.Size = new System.Drawing.Size(249, 26);
+            this.txtTags.TabIndex = 6;
             // 
-            // textBox2
+            // txtSummary
             // 
-            this.textBox2.Location = new System.Drawing.Point(790, 406);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(249, 26);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(790, 293);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(249, 26);
-            this.textBox3.TabIndex = 7;
+            this.txtSummary.Location = new System.Drawing.Point(790, 293);
+            this.txtSummary.Name = "txtSummary";
+            this.txtSummary.Size = new System.Drawing.Size(249, 26);
+            this.txtSummary.TabIndex = 7;
             // 
             // label1
             // 
@@ -189,10 +190,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(640, 75);
+            this.pictureBox1.Image = global::Autodesk_Applicatin.Properties.Resources.document1;
+            this.pictureBox1.Location = new System.Drawing.Point(693, 93);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(70, 72);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -205,10 +206,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.txtSummary);
+            this.Controls.Add(this.txtTags);
+            this.Controls.Add(this.txtFile);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -217,6 +217,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,13 +234,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtFile;
+        private System.Windows.Forms.TextBox txtTags;
+        private System.Windows.Forms.TextBox txtSummary;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
