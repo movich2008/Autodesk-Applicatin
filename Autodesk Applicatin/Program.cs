@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,12 @@ namespace Autodesk_Applicatin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //  Set a Global Font for the Entire Application
+            Application.OpenForms.Cast<Form>().ToList().ForEach(form => form.Font = new Font("Poppins", 10, FontStyle.Regular));
             Application.Run(new LoginForm());
         }
     }
+
+
 }
