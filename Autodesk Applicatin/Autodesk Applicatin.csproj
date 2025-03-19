@@ -258,6 +258,18 @@
   <ItemGroup>
     <None Include="Resources\forecast-analytics.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forecast-analytics1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
