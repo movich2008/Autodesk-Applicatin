@@ -19,9 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnModel;
@@ -51,7 +48,9 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private LiveCharts.WinForms.PieChart pieChart2;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 
