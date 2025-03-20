@@ -123,6 +123,26 @@ namespace Autodesk_Applicatin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap autodesk_logo_black_transparent11 {
+            get {
+                object obj = ResourceManager.GetObject("autodesk-logo-black-transparent11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap autodesk_logo_black_transparent2 {
+            get {
+                object obj = ResourceManager.GetObject("autodesk-logo-black-transparent2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chart_histogram__1_ {
             get {
                 object obj = ResourceManager.GetObject("chart-histogram (1)", resourceCulture);

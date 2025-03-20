@@ -29,13 +29,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.TxtbxModelName = new System.Windows.Forms.Label();
-            this.TxtbxDescription = new System.Windows.Forms.Label();
             this.TxtbxFileFormat = new System.Windows.Forms.Label();
             this.txtbxCreatedOn = new System.Windows.Forms.Label();
             this.txtvxModifiedOn = new System.Windows.Forms.Label();
             this.txtbxDimensions = new System.Windows.Forms.Label();
             this.txtBoxFirstName = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.picBxPreview = new System.Windows.Forms.PictureBox();
             this.txtbxSaveDetails = new System.Windows.Forms.Button();
@@ -49,18 +47,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.dtpCreatedOn = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.dtpModifiedOn = new System.Windows.Forms.DateTimePicker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBxPreview)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,21 +80,11 @@
             this.TxtbxModelName.TabIndex = 1;
             this.TxtbxModelName.Text = "Model Name";
             // 
-            // TxtbxDescription
-            // 
-            this.TxtbxDescription.AutoSize = true;
-            this.TxtbxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtbxDescription.Location = new System.Drawing.Point(20, 212);
-            this.TxtbxDescription.Name = "TxtbxDescription";
-            this.TxtbxDescription.Size = new System.Drawing.Size(109, 25);
-            this.TxtbxDescription.TabIndex = 2;
-            this.TxtbxDescription.Text = "Description";
-            // 
             // TxtbxFileFormat
             // 
             this.TxtbxFileFormat.AutoSize = true;
             this.TxtbxFileFormat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtbxFileFormat.Location = new System.Drawing.Point(15, 285);
+            this.TxtbxFileFormat.Location = new System.Drawing.Point(20, 216);
             this.TxtbxFileFormat.Name = "TxtbxFileFormat";
             this.TxtbxFileFormat.Size = new System.Drawing.Size(109, 25);
             this.TxtbxFileFormat.TabIndex = 3;
@@ -107,7 +94,7 @@
             // 
             this.txtbxCreatedOn.AutoSize = true;
             this.txtbxCreatedOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxCreatedOn.Location = new System.Drawing.Point(12, 349);
+            this.txtbxCreatedOn.Location = new System.Drawing.Point(15, 265);
             this.txtbxCreatedOn.Name = "txtbxCreatedOn";
             this.txtbxCreatedOn.Size = new System.Drawing.Size(109, 25);
             this.txtbxCreatedOn.TabIndex = 4;
@@ -117,7 +104,7 @@
             // 
             this.txtvxModifiedOn.AutoSize = true;
             this.txtvxModifiedOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvxModifiedOn.Location = new System.Drawing.Point(10, 412);
+            this.txtvxModifiedOn.Location = new System.Drawing.Point(11, 318);
             this.txtvxModifiedOn.Name = "txtvxModifiedOn";
             this.txtvxModifiedOn.Size = new System.Drawing.Size(118, 25);
             this.txtvxModifiedOn.TabIndex = 5;
@@ -127,7 +114,7 @@
             // 
             this.txtbxDimensions.AutoSize = true;
             this.txtbxDimensions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxDimensions.Location = new System.Drawing.Point(15, 483);
+            this.txtbxDimensions.Location = new System.Drawing.Point(15, 385);
             this.txtbxDimensions.Name = "txtbxDimensions";
             this.txtbxDimensions.Size = new System.Drawing.Size(114, 25);
             this.txtbxDimensions.TabIndex = 6;
@@ -135,24 +122,15 @@
             // 
             // txtBoxFirstName
             // 
-            this.txtBoxFirstName.Location = new System.Drawing.Point(158, 152);
+            this.txtBoxFirstName.Location = new System.Drawing.Point(149, 152);
             this.txtBoxFirstName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(254, 26);
             this.txtBoxFirstName.TabIndex = 7;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(158, 212);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 26);
-            this.textBox2.TabIndex = 8;
-            // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(158, 485);
+            this.textBox6.Location = new System.Drawing.Point(149, 384);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(254, 26);
@@ -160,7 +138,7 @@
             // 
             // picBxPreview
             // 
-            this.picBxPreview.Location = new System.Drawing.Point(606, 197);
+            this.picBxPreview.Location = new System.Drawing.Point(605, 169);
             this.picBxPreview.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.picBxPreview.Name = "picBxPreview";
             this.picBxPreview.Size = new System.Drawing.Size(300, 292);
@@ -172,7 +150,7 @@
             this.txtbxSaveDetails.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtbxSaveDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxSaveDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtbxSaveDetails.Location = new System.Drawing.Point(176, 568);
+            this.txtbxSaveDetails.Location = new System.Drawing.Point(101, 464);
             this.txtbxSaveDetails.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtbxSaveDetails.Name = "txtbxSaveDetails";
             this.txtbxSaveDetails.Size = new System.Drawing.Size(165, 55);
@@ -186,7 +164,7 @@
             this.txtxbxUploadImage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtxbxUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtxbxUploadImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtxbxUploadImage.Location = new System.Drawing.Point(668, 545);
+            this.txtxbxUploadImage.Location = new System.Drawing.Point(665, 497);
             this.txtxbxUploadImage.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtxbxUploadImage.Name = "txtxbxUploadImage";
             this.txtxbxUploadImage.Size = new System.Drawing.Size(165, 55);
@@ -199,7 +177,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(692, 140);
+            this.label8.Location = new System.Drawing.Point(676, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 25);
             this.label8.TabIndex = 16;
@@ -288,42 +266,18 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.maskedTextBox2);
             this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.label18);
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(987, 74);
+            this.panel2.Size = new System.Drawing.Size(1035, 74);
             this.panel2.TabIndex = 17;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(916, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 37);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "🇬🇧";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(806, 31);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 29);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Sign in";
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(124, 15);
+            this.maskedTextBox2.Location = new System.Drawing.Point(709, 32);
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(211, 26);
             this.maskedTextBox2.TabIndex = 13;
@@ -334,47 +288,27 @@
             this.label17.BackColor = System.Drawing.SystemColors.Control;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(342, 22);
+            this.label17.Location = new System.Drawing.Point(926, 29);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(27, 29);
             this.label17.TabIndex = 12;
             this.label17.Text = "⌕";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.Control;
-            this.label18.Location = new System.Drawing.Point(3, 12);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(116, 29);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "AutoDesk";
-            // 
             // dtpCreatedOn
             // 
             this.dtpCreatedOn.CustomFormat = "dd-MM-yyy";
             this.dtpCreatedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCreatedOn.Location = new System.Drawing.Point(158, 349);
+            this.dtpCreatedOn.Location = new System.Drawing.Point(149, 265);
             this.dtpCreatedOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpCreatedOn.Name = "dtpCreatedOn";
             this.dtpCreatedOn.Size = new System.Drawing.Size(229, 26);
             this.dtpCreatedOn.TabIndex = 18;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(158, 286);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 26);
-            this.textBox3.TabIndex = 9;
-            // 
             // dtpModifiedOn
             // 
             this.dtpModifiedOn.CustomFormat = "dd-MM-yyy";
             this.dtpModifiedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpModifiedOn.Location = new System.Drawing.Point(158, 406);
+            this.dtpModifiedOn.Location = new System.Drawing.Point(149, 318);
             this.dtpModifiedOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpModifiedOn.Name = "dtpModifiedOn";
             this.dtpModifiedOn.Size = new System.Drawing.Size(229, 26);
@@ -384,12 +318,31 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.Image = global::Autodesk_Applicatin.Properties.Resources.autodesk_logo_black_transparent11;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 42);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(149, 213);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(141, 28);
+            this.comboBox1.TabIndex = 19;
+            // 
             // ModelDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(988, 662);
+            this.ClientSize = new System.Drawing.Size(1038, 690);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dtpModifiedOn);
             this.Controls.Add(this.dtpCreatedOn);
             this.Controls.Add(this.panel2);
@@ -399,14 +352,11 @@
             this.Controls.Add(this.picBxPreview);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtBoxFirstName);
             this.Controls.Add(this.txtbxDimensions);
             this.Controls.Add(this.txtvxModifiedOn);
             this.Controls.Add(this.txtbxCreatedOn);
             this.Controls.Add(this.TxtbxFileFormat);
-            this.Controls.Add(this.TxtbxDescription);
             this.Controls.Add(this.TxtbxModelName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ModelDetails";
@@ -417,6 +367,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,13 +377,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TxtbxModelName;
-        private System.Windows.Forms.Label TxtbxDescription;
         private System.Windows.Forms.Label TxtbxFileFormat;
         private System.Windows.Forms.Label txtbxCreatedOn;
         private System.Windows.Forms.Label txtvxModifiedOn;
         private System.Windows.Forms.Label txtbxDimensions;
         private System.Windows.Forms.TextBox txtBoxFirstName;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.PictureBox picBxPreview;
         private System.Windows.Forms.Button txtbxSaveDetails;
@@ -446,14 +395,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker dtpCreatedOn;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DateTimePicker dtpModifiedOn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
