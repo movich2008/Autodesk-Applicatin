@@ -73,6 +73,36 @@ namespace Autodesk_Applicatin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap analytics {
+            get {
+                object obj = ResourceManager.GetObject("analytics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap analytics1 {
+            get {
+                object obj = ResourceManager.GetObject("analytics1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap analytics2 {
+            get {
+                object obj = ResourceManager.GetObject("analytics2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap autodesk_logo_black_transparent {
             get {
                 object obj = ResourceManager.GetObject("autodesk-logo-black-transparent", resourceCulture);
@@ -86,6 +116,26 @@ namespace Autodesk_Applicatin.Properties {
         internal static System.Drawing.Bitmap autodesk_logo_black_transparent1 {
             get {
                 object obj = ResourceManager.GetObject("autodesk-logo-black-transparent1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap autodesk_logo_black_transparent11 {
+            get {
+                object obj = ResourceManager.GetObject("autodesk-logo-black-transparent11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap autodesk_logo_black_transparent2 {
+            get {
+                object obj = ResourceManager.GetObject("autodesk-logo-black-transparent2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +246,16 @@ namespace Autodesk_Applicatin.Properties {
         internal static System.Drawing.Bitmap forecast_analytics {
             get {
                 object obj = ResourceManager.GetObject("forecast-analytics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forecast_analytics1 {
+            get {
+                object obj = ResourceManager.GetObject("forecast-analytics1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
