@@ -5,9 +5,12 @@ namespace Autodesk_Applicatin
 {
     public partial class EditorDashboard : Form
     {
-        public EditorDashboard()
+        private string userRole;
+
+        public EditorDashboard(string role) // ✅ Accept role
         {
             InitializeComponent();
+            userRole = role; // ✅ Store role
         }
     }
 }

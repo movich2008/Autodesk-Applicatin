@@ -6,13 +6,14 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
 using System.Drawing;
+using System.Configuration;
 
 
 namespace Autodesk_Applicatin
 {
     public partial class Signup : Form
     {
-        string connString = "Server=127.0.0.1;Port=3307;Database=AutodeskAssetsDB;User ID=root;Password=05032023Ak#;SslMode=None;AllowPublicKeyRetrieval=True;";
+        //string connString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
 
         public Signup()
         {
@@ -82,7 +83,7 @@ namespace Autodesk_Applicatin
         {
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(connString))
+                using (MySqlConnection conn = DatabaseHelper.GetConnection())
                 {
                     await conn.OpenAsync();
 
@@ -91,33 +92,36 @@ namespace Autodesk_Applicatin
                     using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, conn))
                     {
                         checkCmd.Parameters.AddWithValue("@Email", email);
-                        object result = await checkCmd.ExecuteScalarAsync();
-                        int existingUsers = Convert.ToInt32(result ?? 0);
+                        int existingUsers = Convert.ToInt32(await checkCmd.ExecuteScalarAsync());
 
                         if (existingUsers > 0)
                         {
                             MessageBox.Show("An account with this email already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return false;
+                            return false;  // ✅ Ensure return in this path
                         }
                     }
 
                     // Insert new user
-                    string insertQuery = "INSERT INTO users (email, password_hash, role) VALUES (@Email, @Password, 'viewer')";
+                    string insertQuery = "INSERT INTO users (email, password_hash, role) VALUES (@Email, @Password, 'Viewer')";
                     using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Password", hashedPassword);
                         int rowsAffected = await cmd.ExecuteNonQueryAsync();
-                        return rowsAffected > 0;
+
+                        return rowsAffected > 0; // ✅ Return success or failure
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                return false; // ✅ Ensure return even in catch block
             }
         }
+
+
+
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

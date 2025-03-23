@@ -1,6 +1,6 @@
 ﻿namespace Autodesk_Applicatin
 {
-    partial class ManagerDashboard
+    partial class Assets
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ManagerDashboard
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "ManagerDashboard";
-            this.Text = "ManagerDashboard";
-            this.ResumeLayout(false);
-
+            this.Text = "Assets";
         }
 
         #endregion
-     
     }
 }

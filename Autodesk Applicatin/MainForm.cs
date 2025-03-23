@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Autodesk_Applicatin
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm(Form dashboard)
         {
             InitializeComponent();
+            LoadForm(dashboard); // Load the correct dashboard when MainForm opens
+
+            this.Text = dashboard.Text;
         }
 
-        public void LoadForm(Form form)
+        public void LoadForm(Form dashboard)
         {
-            panelContainer.Controls.Clear();  // Remove any existing form
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(form);
-            form.Show();
+            this.Controls.Clear(); // Clear any existing content
+            dashboard.TopLevel = false; // Make the dashboard act like a user control
+            dashboard.FormBorderStyle = FormBorderStyle.None; // Remove window borders
+            dashboard.Dock = DockStyle.Fill; // Fill the MainForm with the dashboard
+            this.Controls.Add(dashboard); // Add the dashboard to the MainForm's controls
+            dashboard.Show(); // Show the dashboard inside MainForm
         }
     }
 }
