@@ -157,8 +157,7 @@
             this.txtbxSaveDetails.TabIndex = 14;
             this.txtbxSaveDetails.Text = "Save Details";
             this.txtbxSaveDetails.UseVisualStyleBackColor = false;
-            this.txtbxSaveDetails.Click += new System.EventHandler(this.txtbxSaveDetails_Click);
-            // 
+          
             // txtxbxUploadImage
             // 
             this.txtxbxUploadImage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -171,7 +170,7 @@
             this.txtxbxUploadImage.TabIndex = 15;
             this.txtxbxUploadImage.Text = "Upload Image";
             this.txtxbxUploadImage.UseVisualStyleBackColor = false;
-            this.txtxbxUploadImage.Click += new System.EventHandler(this.txtxbxUploadImage_Click);
+           
             // 
             // label8
             // 

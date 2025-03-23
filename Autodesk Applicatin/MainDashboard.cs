@@ -43,7 +43,6 @@ namespace Autodesk_Applicatin
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pieChart2 = new LiveCharts.WinForms.PieChart();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -286,14 +285,7 @@ namespace Autodesk_Applicatin
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
             // 
-            // pieChart2
-            // 
-            this.pieChart2.Location = new System.Drawing.Point(938, 325);
-            this.pieChart2.Name = "pieChart2";
-            this.pieChart2.Size = new System.Drawing.Size(275, 236);
-            this.pieChart2.TabIndex = 9;
-            this.pieChart2.Text = "pieChart2";
-            // 
+          
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -398,7 +390,6 @@ namespace Autodesk_Applicatin
             // 
             this.ClientSize = new System.Drawing.Size(1366, 757);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.pieChart2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);

@@ -49,7 +49,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private LiveCharts.WinForms.PieChart pieChart2;
         private System.Windows.Forms.Panel panel7;
     }
 }
