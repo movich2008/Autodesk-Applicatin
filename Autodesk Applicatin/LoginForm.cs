@@ -4,16 +4,14 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BCrypt.Net;
 using MySql.Data.MySqlClient;
+using BCrypt.Net;
 
 namespace Autodesk_Applicatin
 {
     public partial class LoginForm : Form
     {
-        //string connString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-
-
+        string connString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
 
         public LoginForm()
         {
@@ -25,93 +23,71 @@ namespace Autodesk_Applicatin
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            if (!ValidateInputs(email, password))
-                return;
+            if (!ValidateInputs(email, password)) return;
 
             bool loginSuccess = await AuthenticateUserAsync(email, password);
+            if (!loginSuccess) return;
 
-            if (loginSuccess)
+            string userRole = await GetUserRoleFromDatabase(email);
+            if (string.IsNullOrEmpty(userRole))
             {
-                this.Hide();
-
-                // Fetch the user role from the database
-                string userRole = await GetUserRoleFromDatabase(email);
-
-                Form dashboard = null;
-
-                switch (userRole.ToLower())
-                {
-                    case "admin":
-                        dashboard = new AdminDashboard(userRole);
-                        break;
-                    case "manager":
-                        dashboard = new ManagerDashboard(userRole);
-                        break;
-                    case "editor":
-                        dashboard = new EditorDashboard(userRole);
-                        break;
-                    case "viewer":
-                        dashboard = new ViewerDashboard(userRole); // Viewer redirection
-                        break;
-                    default:
-                        MessageBox.Show("Invalid role detected. Contact admin.");
-                        return;
-                }
-
-                // Ensure only one MainForm is created
-                MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-
-                if (mainForm == null)
-                {
-                    mainForm = new MainForm(dashboard); // Create MainForm with the correct dashboard
-                    mainForm.Show();  // Show the MainForm
-                }
-                else
-                {
-                    mainForm.LoadForm(dashboard); // If MainForm already exists, load the dashboard
-                }
+                MessageBox.Show("User role not found. Please contact admin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            this.Hide(); // ✅ Hide the login form
+
+            Form dashboard = CreateDashboard(userRole); // ✅ create dashboard once
+            if (dashboard == null)
             {
-                MessageBox.Show("Invalid email or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid role. Cannot continue.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            MainForm mainForm = new MainForm(dashboard); // ✅ Pass dashboard once
+            mainForm.Show(); // ✅ This internally loads and shows it
         }
 
 
+
+        private Form CreateDashboard(string role)
+        {
+            switch (role.ToLower())
+            {
+                case "admin": return new AdminDashboard(role);
+                case "manager": return new ManagerDashboard(role);
+                case "editor": return new EditorDashboard(role);
+                case "viewer": return new ViewerDashboard(role);
+                default: return null;
+            }
+        }
+
         private async Task<string> GetUserRoleFromDatabase(string email)
         {
-            string role = string.Empty;
-          
+            string role = "";
+
             try
             {
                 using (MySqlConnection conn = DatabaseHelper.GetConnection())
                 {
                     await conn.OpenAsync();
                     string query = "SELECT role FROM users WHERE email = @Email";
-
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
-
                         object result = await cmd.ExecuteScalarAsync();
                         if (result != null)
-                        {
-                            role = result.ToString(); // Get the role from the database
-                        }
+                            role = result.ToString();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return role; // Return the user's role
+            return role;
         }
-
-
-
-
 
         private bool ValidateInputs(string email, string password)
         {
@@ -132,18 +108,16 @@ namespace Autodesk_Applicatin
 
         private async Task<bool> AuthenticateUserAsync(string email, string password)
         {
-          
             try
             {
                 using (MySqlConnection conn = DatabaseHelper.GetConnection())
                 {
                     await conn.OpenAsync();
-                    string query = "SELECT password_hash, CAST(role AS CHAR) FROM users WHERE email = @Email";
+                    string query = "SELECT password_hash FROM users WHERE email = @Email";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
-
                         using (var reader = await cmd.ExecuteReaderAsync())
                         {
                             if (!reader.HasRows)
@@ -154,17 +128,9 @@ namespace Autodesk_Applicatin
 
                             if (await reader.ReadAsync())
                             {
-                                object hashObj = reader[0];  // Password hash (VARCHAR)
-                                object roleObj = reader[1];  // Role (ENUM, returned as CHAR)
-
-                                string storedHash = hashObj is DBNull ? "" : Convert.ToString(hashObj);
-                                string userRole = roleObj is DBNull ? "viewer" : Convert.ToString(roleObj); // Default role: viewer
-
-
+                                string storedHash = reader["password_hash"].ToString();
                                 if (BCrypt.Net.BCrypt.Verify(password, storedHash))
                                 {
-                                    MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    RedirectUser(userRole);
                                     return true;
                                 }
                                 else
@@ -176,49 +142,21 @@ namespace Autodesk_Applicatin
                         }
                     }
                 }
-                return false;
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return false;
         }
-        private void RedirectUser(string role)
+
+        private void LoginForm_Load(object sender, EventArgs e)
         {
-            Form dashboard = null;
-
-            switch (role.ToLower()) // ✅ Ensure case-insensitivity
-            {
-                case "admin":
-                    dashboard = new AdminDashboard(role);
-                    break;
-                case "editor":
-                    dashboard = new EditorDashboard(role);
-                    break;
-                case "manager":
-                    dashboard = new ManagerDashboard(role);
-                    break;
-                case "viewer":
-                    dashboard = new ViewerDashboard(role);
-                    break;
-                default:
-                    MessageBox.Show("Invalid role detected. Contact admin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // ✅ Exit function if role is invalid
-            }
-
-            if (dashboard != null)
-            {
-                MainForm mainForm = new MainForm(dashboard); // ✅ Pass correct dashboard to MainForm
-                this.Hide(); // ✅ Hide the login form
-                mainForm.Show(); // ✅ Show MainForm with the dashboard inside pnlContainer
-            }
+            UIHelper.CenterTextVertically(txtEmail);
+            UIHelper.CenterTextVertically(txtPassword);
+            UIStyleHelper.StyleAllControls(this);
         }
-
-
 
         private void linkSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -226,15 +164,5 @@ namespace Autodesk_Applicatin
             Signup signupForm = new Signup();
             signupForm.Show();
         }
-
-        // UIHelper
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            UIHelper.CenterTextVertically(txtEmail);
-            UIHelper.CenterTextVertically(txtPassword);
-
-        }
-
     }
 }

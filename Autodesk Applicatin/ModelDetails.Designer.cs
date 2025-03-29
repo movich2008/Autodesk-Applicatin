@@ -372,8 +372,6 @@
 
         }
 
-
-
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TxtbxModelName;
         private System.Windows.Forms.Label TxtbxFileFormat;

@@ -168,11 +168,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin3DViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin3DViewer.Designer.cs">
+      <DependentUpon>Admin3DViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAssetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminAssetControl.Designer.cs">
+      <DependentUpon>AdminAssetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAssetDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAssetDetails.Designer.cs">
+      <DependentUpon>AdminAssetDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAssetEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminAssetEditForm.Designer.cs">
+      <DependentUpon>AdminAssetEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetDetailsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetDetailsPopup.Designer.cs">
+      <DependentUpon>AssetDetailsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetGalleryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetGalleryForm.Designer.cs">
+      <DependentUpon>AssetGalleryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditorDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorDashboard.Designer.cs">
+      <DependentUpon>EditorDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\DatabaseHelper.cs" />
     <Compile Include="Entities\AssetDetails.cs" />
@@ -188,11 +230,11 @@
     <Compile Include="AssetsControl.Designer.cs">
       <DependentUpon>AssetsControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditorDashboard.cs">
+    <Compile Include="EditorUploadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditorDashboard.Designer.cs">
-      <DependentUpon>EditorDashboard.cs</DependentUpon>
+    <Compile Include="EditorUploadForm.Designer.cs">
+      <DependentUpon>EditorUploadForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -262,7 +304,14 @@
     <Compile Include="ModeManagementForm.Designer.cs">
       <DependentUpon>ModeManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIHelper.cs" />
+    <Compile Include="Entities\UIHelper.cs" />
+    <Compile Include="Entities\UIStyleHelper.cs" />
+    <Compile Include="UserCreationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCreationForm.Designer.cs">
+      <DependentUpon>UserCreationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,14 +324,47 @@
     <Compile Include="ViewerDashboard.Designer.cs">
       <DependentUpon>ViewerDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin3DViewer.resx">
+      <DependentUpon>Admin3DViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAssetControl.resx">
+      <DependentUpon>AdminAssetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAssetDetails.resx">
+      <DependentUpon>AdminAssetDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAssetEditForm.resx">
+      <DependentUpon>AdminAssetEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetDetailsPopup.resx">
+      <DependentUpon>AssetDetailsPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetGalleryForm.resx">
+      <DependentUpon>AssetGalleryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets.resx">
+      <DependentUpon>Assets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsControl.resx">
+      <DependentUpon>AssetsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditorDashboard.resx">
+      <DependentUpon>EditorDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditorUploadForm.resx">
+      <DependentUpon>EditorUploadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerDashboard.resx">
       <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsersControl.resx">
+      <DependentUpon>ManageUsersControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Support Form.resx">
       <DependentUpon>Support Form.cs</DependentUpon>
@@ -320,18 +402,28 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserCreationForm.resx">
+      <DependentUpon>UserCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserManagementForm.resx">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewerDashboard.resx">
       <DependentUpon>ViewerDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="Assets\simplified_robot.mtl">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="AdminAssetDetails.Designer.c" />
+    <Content Include="Assets\Gear1.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\simplified_robot.obj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Assets\Gear1.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Assets\Wheel.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Wheel.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -429,6 +521,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\autodesk-logo-black-transparent11.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\Gear1_Preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\no_preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\wheel_preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

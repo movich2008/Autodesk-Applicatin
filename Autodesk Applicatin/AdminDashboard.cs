@@ -21,7 +21,11 @@ namespace Autodesk_Applicatin
 
         private void btnViewAssets_Click(object sender, EventArgs e)
         {
-            LoadControl(new AssetsControl());
+            pnlMain.Controls.Clear();
+            AdminAssetControl assetControl = new AdminAssetControl();
+            assetControl.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(assetControl);
+            
         }
 
         private void btnManageUsers_Click(object sender, EventArgs e)

@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtbxEmail = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.txtbxPassword = new System.Windows.Forms.Label();
@@ -39,6 +40,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.lblFullName = new System.Windows.Forms.Label();
+            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // txtbxEmail
@@ -46,7 +50,7 @@
             this.txtbxEmail.AutoSize = true;
             this.txtbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtbxEmail.Location = new System.Drawing.Point(157, 102);
+            this.txtbxEmail.Location = new System.Drawing.Point(157, 161);
             this.txtbxEmail.Name = "txtbxEmail";
             this.txtbxEmail.Size = new System.Drawing.Size(48, 20);
             this.txtbxEmail.TabIndex = 21;
@@ -68,7 +72,7 @@
             this.txtbxPassword.AutoSize = true;
             this.txtbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtbxPassword.Location = new System.Drawing.Point(157, 177);
+            this.txtbxPassword.Location = new System.Drawing.Point(157, 236);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(78, 20);
             this.txtbxPassword.TabIndex = 24;
@@ -79,7 +83,7 @@
             this.txtbxConfirmPassword.AutoSize = true;
             this.txtbxConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxConfirmPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtbxConfirmPassword.Location = new System.Drawing.Point(157, 250);
+            this.txtbxConfirmPassword.Location = new System.Drawing.Point(157, 311);
             this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
             this.txtbxConfirmPassword.Size = new System.Drawing.Size(137, 20);
             this.txtbxConfirmPassword.TabIndex = 30;
@@ -91,7 +95,7 @@
             this.btnSignup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignup.ForeColor = System.Drawing.Color.Black;
-            this.btnSignup.Location = new System.Drawing.Point(161, 331);
+            this.btnSignup.Location = new System.Drawing.Point(161, 390);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(300, 42);
             this.btnSignup.TabIndex = 32;
@@ -104,7 +108,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label26.Location = new System.Drawing.Point(265, 386);
+            this.label26.Location = new System.Drawing.Point(265, 445);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(132, 13);
             this.label26.TabIndex = 34;
@@ -118,7 +122,7 @@
             this.lnkLogin.ForeColor = System.Drawing.Color.White;
             this.lnkLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkLogin.LinkColor = System.Drawing.Color.WhiteSmoke;
-            this.lnkLogin.Location = new System.Drawing.Point(425, 386);
+            this.lnkLogin.Location = new System.Drawing.Point(425, 445);
             this.lnkLogin.Name = "lnkLogin";
             this.lnkLogin.Size = new System.Drawing.Size(36, 13);
             this.lnkLogin.TabIndex = 37;
@@ -131,7 +135,7 @@
             this.txtEmail.BackColor = System.Drawing.Color.Black;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtEmail.Location = new System.Drawing.Point(161, 124);
+            this.txtEmail.Location = new System.Drawing.Point(161, 183);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 20);
             this.txtEmail.TabIndex = 38;
@@ -142,7 +146,7 @@
             this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPassword.Location = new System.Drawing.Point(161, 200);
+            this.txtPassword.Location = new System.Drawing.Point(161, 259);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(300, 20);
             this.txtPassword.TabIndex = 38;
@@ -153,18 +157,41 @@
             this.txtConfirmPassword.BackColor = System.Drawing.Color.Black;
             this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(161, 273);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(161, 334);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(300, 20);
             this.txtConfirmPassword.TabIndex = 38;
             this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // lblFullName
+            // 
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblFullName.Location = new System.Drawing.Point(157, 103);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(78, 20);
+            this.lblFullName.TabIndex = 21;
+            this.lblFullName.Text = "Full name";
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.BackColor = System.Drawing.Color.Black;
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFullName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFullName.Location = new System.Drawing.Point(161, 125);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(300, 20);
+            this.txtFullName.TabIndex = 38;
+            this.txtFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Signup
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(634, 441);
+            this.ClientSize = new System.Drawing.Size(634, 505);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lnkLogin);
             this.Controls.Add(this.label26);
@@ -172,9 +199,11 @@
             this.Controls.Add(this.txtbxConfirmPassword);
             this.Controls.Add(this.txtbxPassword);
             this.Controls.Add(this.label22);
+            this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.txtbxEmail);
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "authButton";
             this.Text = "Password";
             this.Load += new System.EventHandler(this.Signup_Load);
             this.ResumeLayout(false);
@@ -216,5 +245,8 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.Label lblFullName;
+        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

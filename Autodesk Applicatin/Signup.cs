@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
-using System.Drawing;
-using System.Configuration;
-
 
 namespace Autodesk_Applicatin
 {
     public partial class Signup : Form
     {
-        //string connString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-
         public Signup()
         {
             InitializeComponent();
@@ -22,23 +19,17 @@ namespace Autodesk_Applicatin
 
         private async void btnSignup_Click(object sender, EventArgs e)
         {
+            string fullName = CapitalizeEachWord(txtFullName.Text.Trim());
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
             string confirmPassword = txtConfirmPassword.Text.Trim();
 
-            // Validate inputs
-            if (!ValidateInputs(email, password, confirmPassword))
+            if (!ValidateInputs(fullName, email, password, confirmPassword))
                 return;
 
-            // Hash password before storing in the database
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
-            string testHash = BCrypt.Net.BCrypt.HashPassword("test123");
-            Console.WriteLine(testHash);
-
-
-            // Store the user in the database
-            bool success = await RegisterUserAsync(email, hashedPassword);
+            bool success = await RegisterUserAsync(fullName, email, hashedPassword);
 
             if (success)
             {
@@ -53,23 +44,32 @@ namespace Autodesk_Applicatin
             }
         }
 
-        private bool ValidateInputs(string email, string password, string confirmPassword)
+        private bool ValidateInputs(string fullName, string email, string password, string confirmPassword)
         {
-            // Email validation
+            if (string.IsNullOrWhiteSpace(fullName))
+            {
+                MessageBox.Show("Full name is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Regex.IsMatch(fullName, @"^[A-Za-z\s]+$"))
+            {
+                MessageBox.Show("Full name must contain only letters and spaces.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             if (string.IsNullOrWhiteSpace(email) || !Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("Invalid email format. Please enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            // Password validation
             if (password.Length < 6)
             {
                 MessageBox.Show("Password must be at least 6 characters long.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            // Confirm password check
             if (password != confirmPassword)
             {
                 MessageBox.Show("Passwords do not match. Please re-enter.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -79,7 +79,7 @@ namespace Autodesk_Applicatin
             return true;
         }
 
-        private async Task<bool> RegisterUserAsync(string email, string hashedPassword)
+        private async Task<bool> RegisterUserAsync(string fullName, string email, string hashedPassword)
         {
             try
             {
@@ -87,7 +87,6 @@ namespace Autodesk_Applicatin
                 {
                     await conn.OpenAsync();
 
-                    // Check if email already exists
                     string checkQuery = "SELECT COUNT(*) FROM users WHERE email = @Email";
                     using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, conn))
                     {
@@ -97,31 +96,28 @@ namespace Autodesk_Applicatin
                         if (existingUsers > 0)
                         {
                             MessageBox.Show("An account with this email already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return false;  // ✅ Ensure return in this path
+                            return false;
                         }
                     }
 
-                    // Insert new user
-                    string insertQuery = "INSERT INTO users (email, password_hash, role) VALUES (@Email, @Password, 'Viewer')";
+                    string insertQuery = "INSERT INTO users (full_name, email, password_hash, role) VALUES (@FullName, @Email, @Password, 'Viewer')";
                     using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
                     {
+                        cmd.Parameters.AddWithValue("@FullName", fullName);
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Password", hashedPassword);
                         int rowsAffected = await cmd.ExecuteNonQueryAsync();
 
-                        return rowsAffected > 0; // ✅ Return success or failure
+                        return rowsAffected > 0;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false; // ✅ Ensure return even in catch block
+                return false;
             }
         }
-
-
-
 
         private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -132,22 +128,41 @@ namespace Autodesk_Applicatin
 
         private void Signup_Load(object sender, EventArgs e)
         {
-
+            UIStyleHelper.StyleAllControls(this);
+            CenterTextVertically(txtFullName);
             CenterTextVertically(txtEmail);
             CenterTextVertically(txtPassword);
             CenterTextVertically(txtConfirmPassword);
 
+            // ✅ Tooltip for full name
+            toolTip1.SetToolTip(txtFullName, "Enter your full name using letters only (e.g., John Doe)");
+
+            // ✅ Restrict typing numbers/symbols in full name
+            txtFullName.KeyPress += TxtFullName_KeyPress;
+        }
+
+        // ✅ Prevent numbers/symbols while typing full name
+        private void TxtFullName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+                toolTip1.Show("Only letters and spaces are allowed.", txtFullName, 0, txtFullName.Height + 5, 2000);
+            }
         }
 
         private void CenterTextVertically(TextBox textBox)
         {
-            // Move cursor to center (forces text to align in the middle)
             textBox.Multiline = true;
             textBox.AutoSize = false;
-            textBox.Height = 30;  
+            textBox.Height = 30;
             textBox.TextAlign = HorizontalAlignment.Center;
-            textBox.Padding = new Padding(5); 
+            textBox.Padding = new Padding(5);
         }
 
+        private string CapitalizeEachWord(string input)
+        {
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input.ToLower());
+        }
     }
 }

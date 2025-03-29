@@ -16,5 +16,10 @@ namespace Autodesk_Applicatin
         {
             InitializeComponent();
         }
+
+        private void Assets_Load(object sender, EventArgs e)
+        {
+            UIStyleHelper.StyleAllControls(this);
+        }
     }
 }
