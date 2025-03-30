@@ -90,7 +90,7 @@ namespace Autodesk_Applicatin
             }
         }
 
-        private void pnlEditor_Paint(object sender, PaintEventArgs e)
+        private void  pnlEditor_Paint(object sender, PaintEventArgs e)
         {
 
         }
