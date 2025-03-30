@@ -89,5 +89,10 @@ namespace Autodesk_Applicatin
                 LoadAssetListToGrid(); // Reload list after successful edit
             }
         }
+
+        private void pnlEditor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
