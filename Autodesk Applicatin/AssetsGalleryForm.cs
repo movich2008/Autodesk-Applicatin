@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Autodesk_Applicatin
 {
-    public partial class NotificationsForm : Form
+    public partial class AssetsGalleryForm : Form
     {
-        public NotificationsForm()
+        public AssetsGalleryForm()
         {
             InitializeComponent();
         }

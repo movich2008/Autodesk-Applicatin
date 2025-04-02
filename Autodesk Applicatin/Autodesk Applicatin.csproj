@@ -208,12 +208,6 @@
     <Compile Include="AssetDetailsPopup.Designer.cs">
       <DependentUpon>AssetDetailsPopup.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssetGalleryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AssetGalleryForm.Designer.cs">
-      <DependentUpon>AssetGalleryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,11 +264,11 @@
     <Compile Include="MainDashboard.Designer.cs">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="NotificationsForm.cs">
+    <Compile Include="AssetsGalleryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NotificationsForm.Designer.cs">
-      <DependentUpon>NotificationsForm.cs</DependentUpon>
+    <Compile Include="AssetsGalleryForm.Designer.cs">
+      <DependentUpon>AssetsGalleryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -346,9 +340,6 @@
     <EmbeddedResource Include="AssetDetailsPopup.resx">
       <DependentUpon>AssetDetailsPopup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssetGalleryForm.resx">
-      <DependentUpon>AssetGalleryForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Assets.resx">
       <DependentUpon>Assets.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,8 +376,8 @@
     <EmbeddedResource Include="ModeManagementForm.resx">
       <DependentUpon>ModeManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NotificationsForm.resx">
-      <DependentUpon>NotificationsForm.cs</DependentUpon>
+    <EmbeddedResource Include="AssetsGalleryForm.resx">
+      <DependentUpon>AssetsGalleryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Projects Form.resx">
       <DependentUpon>Projects Form.cs</DependentUpon>
