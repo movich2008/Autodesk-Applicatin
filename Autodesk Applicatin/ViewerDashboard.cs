@@ -203,5 +203,10 @@ namespace Autodesk_Applicatin
         {
 
         }
+
+        private void elementHost_ChildChanged(object sender, ChildChangedEventArgs e)
+        {
+
+        }
     }
 }
