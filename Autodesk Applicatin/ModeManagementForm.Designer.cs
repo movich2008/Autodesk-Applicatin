@@ -44,12 +44,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new Krypton.Toolkit.KryptonButton();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new Krypton.Toolkit.KryptonButton();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -196,6 +196,26 @@
             this.panel2.Size = new System.Drawing.Size(1182, 74);
             this.panel2.TabIndex = 18;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(591, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(336, 42);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Mode Management";
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(1039, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.TabIndex = 22;
+            this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.label14.Values.Text = "Log in";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -235,26 +255,6 @@
             this.label17.Size = new System.Drawing.Size(27, 29);
             this.label17.TabIndex = 12;
             this.label17.Text = "⌕";
-            // 
-            // label14
-            // 
-            this.label14.Location = new System.Drawing.Point(1039, 7);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 51);
-            this.label14.TabIndex = 22;
-            this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.label14.Values.Text = "Log in";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(591, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(345, 42);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Model Management";
             // 
             // ModeManagementForm
             // 
