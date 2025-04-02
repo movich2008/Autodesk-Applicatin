@@ -42,6 +42,7 @@
             this.pnlEditor = new System.Windows.Forms.Panel();
             this.btnEditAsset = new Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssets)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAssetViewer)).BeginInit();
@@ -103,6 +104,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label12);
@@ -200,6 +202,17 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "⌕";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(707, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(299, 42);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Editor Dashboard";
+            // 
             // EditorDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -240,5 +253,6 @@
         private System.Windows.Forms.Panel pnlEditor;
         private Krypton.Toolkit.KryptonButton btnEditAsset;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
