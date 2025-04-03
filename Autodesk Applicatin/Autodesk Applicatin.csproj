@@ -323,6 +323,10 @@
       <DependentUpon>ViewerDashboard.cs</DependentUpon>
     </Compile>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\5.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\download %281%29.jpg" />
     <EmbeddedResource Include="Admin3DViewer.resx">
       <DependentUpon>Admin3DViewer.cs</DependentUpon>
     </EmbeddedResource>
