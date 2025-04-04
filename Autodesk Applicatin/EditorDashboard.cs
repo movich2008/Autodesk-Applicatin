@@ -95,9 +95,7 @@ namespace Autodesk_Applicatin
 
         }
 
-        private void picAssetViewer_Click(object sender, EventArgs e)
-        {
+     
 
-        }
     }
 }
