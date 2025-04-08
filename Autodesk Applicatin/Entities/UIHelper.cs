@@ -46,9 +46,9 @@ namespace Autodesk_Applicatin
             }
         }
 
-        public static void PopulateAssetGallery(AssetGalleryForm galleryForm, List<int> assetIDs, Func<int, string> getName, Func<int, string> getImage, Action<int> openAssetCallback)
+        public static void PopulateAssetGallery(AssetsGalleryForm galleryForm, List<int> assetIDs, Func<int, string> getName, Func<int, string> getImage, Action<int> openAssetCallback)
         {
-            galleryForm.flpAssets.Controls.Clear();
+            galleryForm.flpAsset.Controls.Clear();
 
             foreach (int assetID in assetIDs)
             {
@@ -103,6 +103,11 @@ namespace Autodesk_Applicatin
 
                 // Add to flow panel
                 galleryForm.flpAssets.Controls.Add(card);
+
+
+
+
+
             }
         }
     }

@@ -18,24 +18,24 @@
         private void InitializeComponent()
         {
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.kryptonLinkLabel3 = new Krypton.Toolkit.KryptonLinkLabel();
+            this.kryptonLinkLabel2 = new Krypton.Toolkit.KryptonLinkLabel();
+            this.kryptonLinkLabel1 = new Krypton.Toolkit.KryptonLinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label14 = new Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new Krypton.Toolkit.KryptonButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.kryptonLinkLabel1 = new Krypton.Toolkit.KryptonLinkLabel();
-            this.kryptonLinkLabel2 = new Krypton.Toolkit.KryptonLinkLabel();
-            this.kryptonLinkLabel3 = new Krypton.Toolkit.KryptonLinkLabel();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.pnlContainer.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -54,6 +54,67 @@
             this.pnlContainer.Size = new System.Drawing.Size(1166, 683);
             this.pnlContainer.TabIndex = 0;
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(291, 227);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(127, 29);
+            this.kryptonLabel1.TabIndex = 19;
+            this.kryptonLabel1.Values.Text = "Quick Search..";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(441, 230);
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(266, 26);
+            this.maskedTextBox2.TabIndex = 18;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.kryptonLinkLabel3);
+            this.groupBox1.Controls.Add(this.kryptonLinkLabel2);
+            this.groupBox1.Controls.Add(this.kryptonLinkLabel1);
+            this.groupBox1.Location = new System.Drawing.Point(323, 322);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(521, 312);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "QUICK ACTIONS";
+            // 
+            // kryptonLinkLabel3
+            // 
+            this.kryptonLinkLabel3.Location = new System.Drawing.Point(181, 184);
+            this.kryptonLinkLabel3.Name = "kryptonLinkLabel3";
+            this.kryptonLinkLabel3.Size = new System.Drawing.Size(122, 29);
+            this.kryptonLinkLabel3.TabIndex = 5;
+            this.kryptonLinkLabel3.Values.Text = "Delete Assets";
+            // 
+            // kryptonLinkLabel2
+            // 
+            this.kryptonLinkLabel2.Location = new System.Drawing.Point(195, 109);
+            this.kryptonLinkLabel2.Name = "kryptonLinkLabel2";
+            this.kryptonLinkLabel2.Size = new System.Drawing.Size(100, 29);
+            this.kryptonLinkLabel2.TabIndex = 4;
+            this.kryptonLinkLabel2.Values.Text = "Edit Assets";
+            // 
+            // kryptonLinkLabel1
+            // 
+            this.kryptonLinkLabel1.Location = new System.Drawing.Point(195, 41);
+            this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
+            this.kryptonLinkLabel1.Size = new System.Drawing.Size(108, 29);
+            this.kryptonLinkLabel1.TabIndex = 3;
+            this.kryptonLinkLabel1.Values.Text = "View Assets";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(436, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(271, 29);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Welcome back, \"Name!\"";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -66,6 +127,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1166, 69);
             this.panel1.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(682, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(193, 42);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Main Form";
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(1035, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.TabIndex = 22;
+            this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.label14.Values.Text = "Log in";
             // 
             // pictureBox1
             // 
@@ -107,87 +188,6 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "⌕";
             // 
-            // label14
-            // 
-            this.label14.Location = new System.Drawing.Point(1035, 3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 51);
-            this.label14.TabIndex = 22;
-            this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.label14.Values.Text = "Log in";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(682, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 42);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Main Form";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(436, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 29);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Welcome back, \"Name!\"";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.kryptonLinkLabel3);
-            this.groupBox1.Controls.Add(this.kryptonLinkLabel2);
-            this.groupBox1.Controls.Add(this.kryptonLinkLabel1);
-            this.groupBox1.Location = new System.Drawing.Point(323, 322);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(521, 312);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "QUICK ACTIONS";
-            // 
-            // kryptonLinkLabel1
-            // 
-            this.kryptonLinkLabel1.Location = new System.Drawing.Point(195, 41);
-            this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
-            this.kryptonLinkLabel1.Size = new System.Drawing.Size(108, 29);
-            this.kryptonLinkLabel1.TabIndex = 3;
-            this.kryptonLinkLabel1.Values.Text = "View Assets";
-            // 
-            // kryptonLinkLabel2
-            // 
-            this.kryptonLinkLabel2.Location = new System.Drawing.Point(195, 109);
-            this.kryptonLinkLabel2.Name = "kryptonLinkLabel2";
-            this.kryptonLinkLabel2.Size = new System.Drawing.Size(100, 29);
-            this.kryptonLinkLabel2.TabIndex = 4;
-            this.kryptonLinkLabel2.Values.Text = "Edit Assets";
-            // 
-            // kryptonLinkLabel3
-            // 
-            this.kryptonLinkLabel3.Location = new System.Drawing.Point(195, 187);
-            this.kryptonLinkLabel3.Name = "kryptonLinkLabel3";
-            this.kryptonLinkLabel3.Size = new System.Drawing.Size(122, 29);
-            this.kryptonLinkLabel3.TabIndex = 5;
-            this.kryptonLinkLabel3.Values.Text = "Delete Assets";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(441, 230);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(266, 26);
-            this.maskedTextBox2.TabIndex = 18;
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(291, 227);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(127, 29);
-            this.kryptonLabel1.TabIndex = 19;
-            this.kryptonLabel1.Values.Text = "Quick Search..";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -200,11 +200,11 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlContainer.ResumeLayout(false);
             this.pnlContainer.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

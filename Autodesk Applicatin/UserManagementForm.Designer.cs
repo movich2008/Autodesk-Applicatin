@@ -76,7 +76,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(423, 63);
+            this.label1.Location = new System.Drawing.Point(422, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 42);
             this.label1.TabIndex = 2;
@@ -146,7 +146,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(982, 6);
+            this.label12.Location = new System.Drawing.Point(943, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 37);
             this.label12.TabIndex = 11;
@@ -157,7 +157,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(861, 14);
+            this.label14.Location = new System.Drawing.Point(1045, 14);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(87, 29);
             this.label14.TabIndex = 13;

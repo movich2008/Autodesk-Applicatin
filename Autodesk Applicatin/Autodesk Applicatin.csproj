@@ -264,11 +264,11 @@
     <Compile Include="MainDashboard.Designer.cs">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssetsGalleryForm.cs">
+    <Compile Include="AssetGalleryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssetsGalleryForm.Designer.cs">
-      <DependentUpon>AssetsGalleryForm.cs</DependentUpon>
+    <Compile Include="AssetGalleryForm.Designer.cs">
+      <DependentUpon>AssetGalleryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -381,8 +381,8 @@
     <EmbeddedResource Include="ModeManagementForm.resx">
       <DependentUpon>ModeManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssetsGalleryForm.resx">
-      <DependentUpon>AssetsGalleryForm.cs</DependentUpon>
+    <EmbeddedResource Include="AssetGalleryForm.resx">
+      <DependentUpon>AssetGalleryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Projects Form.resx">
       <DependentUpon>Projects Form.cs</DependentUpon>
