@@ -2,17 +2,22 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Autodesk_Applicatin
 {
     public partial class ManagerDashboard : Form
     {
         private readonly string userRole;
+        private readonly string managerEmail;
+        private string previousStatus = "";
+        private ComboBox statusComboBox = null;
 
-        public ManagerDashboard(string role)
+        public ManagerDashboard(string role, string email)
         {
             InitializeComponent();
             userRole = role;
+            managerEmail = email;
         }
 
         private void ManagerDashboard_Load(object sender, EventArgs e)
@@ -27,16 +32,103 @@ namespace Autodesk_Applicatin
             UIStyleHelper.StyleAllControls(this);
 
             cmbStatusFilter.Items.AddRange(new string[] { "All", "Pending", "Approved", "Rejected" });
-            cmbStatusFilter.SelectedIndex = 1;
+            cmbStatusFilter.SelectedIndex = 0;
 
-            LoadAssets(); // Load assets initially
-            dgvAssets.CellValueChanged += dgvAssets_CellValueChanged;
+            LoadAssets("All");
+            UpdateCardStats();
+
+            dgvAssets.CellBeginEdit += DgvAssets_CellBeginEdit;
+            dgvAssets.EditingControlShowing += DgvAssets_EditingControlShowing;
+        }
+
+        private void UpdateCardStats()
+        {
+            int total = 0, approved = 0, rejected = 0, pending = 0;
+
+            foreach (DataGridViewRow row in dgvAssets.Rows)
+            {
+                if (row.Cells["status"].Value == null) continue;
+
+                total++;
+                string status = row.Cells["status"].Value.ToString();
+
+                if (status == "Approved") approved++;
+                else if (status == "Rejected") rejected++;
+                else pending++;
+            }
+
+            lblTotalAssets.Text = total.ToString();
+            lblApprovedCount.Text = approved.ToString();
+            lblRejectedCount.Text = rejected.ToString();
+            lblPendingCount.Text = pending.ToString();
+        }
+
+        private void DgvAssets_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvAssets.Columns[e.ColumnIndex].Name == "status")
+            {
+                previousStatus = dgvAssets.Rows[e.RowIndex].Cells["status"].Value?.ToString();
+            }
+        }
+
+        private void DgvAssets_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dgvAssets.CurrentCell.ColumnIndex == dgvAssets.Columns["status"].Index && e.Control is ComboBox)
+            {
+                if (statusComboBox != null)
+                    statusComboBox.SelectedIndexChanged -= StatusComboBox_SelectedIndexChanged;
+
+                statusComboBox = (ComboBox)e.Control;
+                statusComboBox.SelectedIndexChanged += StatusComboBox_SelectedIndexChanged;
+            }
+        }
+
+        private void StatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dgvAssets.CurrentRow == null)
+                return;
+
+            var combo = sender as ComboBox;
+            string newStatus = combo?.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(newStatus))
+                return;
+
+            DataGridViewRow row = dgvAssets.CurrentRow;
+            int assetID = Convert.ToInt32(row.Cells["AssetID"].Value);
+            string editorEmail = row.Cells["EditorEmail"].Value?.ToString();
+
+            if (string.IsNullOrWhiteSpace(editorEmail))
+            {
+                MessageBox.Show("Editor email not found for this asset.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (newStatus == previousStatus)
+                return;
+
+            if (newStatus == "Rejected")
+            {
+                var noteForm = new RejectionNoteForm(assetID, editorEmail, managerEmail);
+                if (noteForm.ShowDialog() == DialogResult.OK)
+                    this.BeginInvoke(new Action(() => LoadAssets()));
+                else
+                    row.Cells["status"].Value = previousStatus;
+            }
+            else
+            {
+                string message = newStatus == "Approved"
+                    ? $"Your asset #{assetID} has been approved."
+                    : "";
+
+                UpdateAssetStatusWithNote(assetID, newStatus, message, editorEmail);
+                this.BeginInvoke(new Action(() => LoadAssets()));
+            }
         }
 
         private void LoadAssets(string filterStatus = "Pending")
         {
-            string query = @"SELECT AssetID, AssetName, AssetDescription, DateAdded, status, status_updated_by, status_updated_at 
-                             FROM Assets";
+            string query = @"SELECT AssetID, AssetName, AssetDescription, DateAdded, status, 
+                             status_updated_by, status_updated_at, EditorEmail FROM Assets";
 
             if (!string.IsNullOrEmpty(filterStatus) && filterStatus != "All")
                 query += " WHERE status = @status";
@@ -52,9 +144,22 @@ namespace Autodesk_Applicatin
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
-                    dgvAssets.DataSource = table;
+                    int columnCount = dgvAssets.Columns.Count;
+                    if (columnCount > 0)
+                    {
+                        int totalWidth = dgvAssets.ClientSize.Width;
+                        int equalWidth = totalWidth / columnCount;
 
+                        foreach (DataGridViewColumn col in dgvAssets.Columns)
+                        {
+                            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None; // Disable auto
+                            col.Width = equalWidth;
+                        }
+                    }
+
+                    dgvAssets.DataSource = table;
                     ConvertStatusColumnToComboBox();
+                    UpdateCardStats();
                 }
             }
         }
@@ -64,14 +169,13 @@ namespace Autodesk_Applicatin
             if (dgvAssets.Columns.Contains("status") && !(dgvAssets.Columns["status"] is DataGridViewComboBoxColumn))
             {
                 int index = dgvAssets.Columns["status"].Index;
-
                 dgvAssets.Columns.Remove("status");
 
                 var combo = new DataGridViewComboBoxColumn
                 {
                     Name = "status",
-                    DataPropertyName = "status",
                     HeaderText = "Status",
+                    DataPropertyName = "status",
                     DataSource = new[] { "Pending", "Approved", "Rejected" },
                     DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton
                 };
@@ -80,51 +184,42 @@ namespace Autodesk_Applicatin
             }
         }
 
-        private void dgvAssets_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void UpdateAssetStatusWithNote(int assetID, string newStatus, string message, string editorEmail)
         {
-            if (e.RowIndex >= 0 && dgvAssets.Columns[e.ColumnIndex].Name == "status")
-            {
-                DataGridViewRow row = dgvAssets.Rows[e.RowIndex];
-
-                if (row.Cells["AssetID"].Value == null || row.Cells["status"].Value == null)
-                    return;
-
-                int assetID = Convert.ToInt32(row.Cells["AssetID"].Value);
-                string newStatus = row.Cells["status"].Value.ToString();
-
-                UpdateAssetStatus(assetID, newStatus);
-            }
-        }
-
-        private void UpdateAssetStatus(int assetID, string newStatus)
-        {
-            string query = @"UPDATE Assets 
-                             SET status = @status, 
-                                 status_updated_by = @updatedBy, 
-                                 status_updated_at = CURRENT_TIMESTAMP 
-                             WHERE AssetID = @assetID";
-
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                using (var cmd = new MySqlCommand(query, conn))
+
+                string updateQuery = @"UPDATE Assets 
+                                       SET status = @status, 
+                                           status_updated_by = @updatedBy, 
+                                           status_updated_at = @updatedAt 
+                                       WHERE AssetID = @assetID";
+
+                using (var cmd = new MySqlCommand(updateQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@status", newStatus);
-                    cmd.Parameters.AddWithValue("@updatedBy", userRole); // ✅ Or replace with email if needed
+                    cmd.Parameters.AddWithValue("@updatedBy", managerEmail);
+                    cmd.Parameters.AddWithValue("@updatedAt", DateTime.Now);
                     cmd.Parameters.AddWithValue("@assetID", assetID);
                     cmd.ExecuteNonQuery();
                 }
+
+                if (!string.IsNullOrEmpty(message))
+                {
+                    string insertNote = @"INSERT INTO Notifications 
+                                          (AssetID, EditorEmail, Message, IsRead, CreatedAt) 
+                                          VALUES (@assetID, @editorEmail, @message, 0, NOW())";
+
+                    using (var cmd = new MySqlCommand(insertNote, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@assetID", assetID);
+                        cmd.Parameters.AddWithValue("@editorEmail", editorEmail);
+                        cmd.Parameters.AddWithValue("@message", message);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
             }
-        }
-
-        private void cmbStatusFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ApplyCombinedFilter();
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            ApplyCombinedFilter();
         }
 
         private void ApplyCombinedFilter()
@@ -132,14 +227,14 @@ namespace Autodesk_Applicatin
             string status = cmbStatusFilter.SelectedItem?.ToString() ?? "All";
             string searchTerm = txtSearch.Text.Trim();
 
-            string query = @"SELECT AssetID, AssetName, AssetDescription, DateAdded, status, status_updated_by, status_updated_at 
-                             FROM Assets WHERE 1=1";
+            string query = @"SELECT AssetID, AssetName, AssetDescription, DateAdded, status, 
+                             status_updated_by, status_updated_at, EditorEmail FROM Assets WHERE 1=1";
 
             if (status != "All")
                 query += " AND status = @status";
 
             if (!string.IsNullOrEmpty(searchTerm))
-                query += " AND AssetName LIKE @search";
+                query += " AND LOWER(AssetName) LIKE @search";
 
             using (var conn = DatabaseHelper.GetConnection())
             {
@@ -155,11 +250,34 @@ namespace Autodesk_Applicatin
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
-                    dgvAssets.DataSource = table;
+                    int columnCount = dgvAssets.Columns.Count;
+                    if (columnCount > 0)
+                    {
+                        int totalWidth = dgvAssets.ClientSize.Width;
+                        int equalWidth = totalWidth / columnCount;
 
+                        foreach (DataGridViewColumn col in dgvAssets.Columns)
+                        {
+                            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None; // Disable auto
+                            col.Width = equalWidth;
+                        }
+                    }
+
+                    dgvAssets.DataSource = table;
                     ConvertStatusColumnToComboBox();
+                    UpdateCardStats();
                 }
             }
+        }
+
+        private void cmbStatusFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ApplyCombinedFilter();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            ApplyCombinedFilter();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

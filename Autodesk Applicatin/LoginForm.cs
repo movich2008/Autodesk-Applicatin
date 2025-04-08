@@ -37,7 +37,7 @@ namespace Autodesk_Applicatin
 
             this.Hide(); // ✅ Hide the login form
 
-            Form dashboard = CreateDashboard(userRole); // ✅ create dashboard once
+            Form dashboard = CreateDashboard(userRole, email); // ✅ create dashboard once
             if (dashboard == null)
             {
                 MessageBox.Show("Invalid role. Cannot continue.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -50,13 +50,13 @@ namespace Autodesk_Applicatin
 
 
 
-        private Form CreateDashboard(string role)
+        private Form CreateDashboard(string role, string email)
         {
             switch (role.ToLower())
             {
                 case "admin": return new AdminDashboard(role);
-                case "manager": return new ManagerDashboard(role);
-                case "editor": return new EditorDashboard(role);
+                case "manager": return new ManagerDashboard(role, email);
+                case "editor": return new EditorDashboard(role, email);
                 case "viewer": return new ViewerDashboard(role);
                 default: return null;
             }
@@ -164,5 +164,7 @@ namespace Autodesk_Applicatin
             Signup signupForm = new Signup();
             signupForm.Show();
         }
+
+       
     }
 }

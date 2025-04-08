@@ -1,9 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Autodesk_Applicatin
 {
@@ -13,14 +9,15 @@ namespace Autodesk_Applicatin
 
         static DatabaseHelper()
         {
-            // Use MySqlConnectionStringBuilder to construct the connection string
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = "127.0.0.1";  // Your MySQL server address
-            builder.Port = 3307;           // Port
-            builder.Database = "AutodeskAssetsDB"; // Your database name
-            builder.UserID = "root";        // Your MySQL username
-            builder.Password = "05032023Ak#";  // Your MySQL password
-            builder.SslMode = MySqlSslMode.None;  // If you're not using SSL
+
+            builder.Server = "gateway01.eu-central-1.prod.aws.tidbcloud.com";
+            builder.Port = 4000;
+            builder.Database = "autodeskassetsdb";
+            builder.UserID = "47k4VMFYq5g1brU.root";
+            builder.Password = "PErqrsK2ZGPB1tmU";
+            builder.SslMode = MySqlSslMode.VerifyCA;
+            builder.CertificateFile = "C:\\TiDB\\cert\\tidb-server-ca.pem"; 
 
             connString = builder.ConnectionString;
         }

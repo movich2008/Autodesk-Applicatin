@@ -4,19 +4,43 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.ComponentModel;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Autodesk_Applicatin
 {
     public static class UIHelper
     {
-        public static void CenterTextVertically(TextBox textBox)
+        public static void LoadFormInPanel(Panel panel, Form form)
         {
-            textBox.Multiline = true;
-            textBox.AutoSize = false;
-            textBox.Height = 30;  
-            textBox.TextAlign = HorizontalAlignment.Center;
-            textBox.Padding = new Padding(5); 
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel.Controls.Clear();
+            panel.Controls.Add(form);
+            form.Show();
         }
+        public static void CenterTextVertically(Control textBox)
+        {
+            if (textBox is TextBox txt)
+            {
+                txt.Multiline = true;
+                txt.AutoSize = false;
+                txt.Height = 30;
+                txt.TextAlign = HorizontalAlignment.Center;
+                txt.Padding = new Padding(5); // Optional: adds left/right spacing
+            }
+            else if (textBox is KryptonTextBox ktxt)
+            {
+                ktxt.Multiline = true;
+                ktxt.TextAlign = HorizontalAlignment.Left; // or Center if you want
+                ktxt.StateCommon.Content.Padding = new Padding(5, 6, 5, 6); // top/bottom padding
+                ktxt.StateCommon.Border.Rounding = 10;
+                ktxt.StateCommon.Back.Color1 = Color.White;
+                ktxt.StateCommon.Border.Color1 = Color.LightGray;
+            }
+        }
+
+
 
 
         // ✅ Add this method to populate AssetDetailsPopup

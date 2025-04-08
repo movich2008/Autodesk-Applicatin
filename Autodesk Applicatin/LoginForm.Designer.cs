@@ -28,145 +28,181 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.linkSignup = new System.Windows.Forms.LinkLabel();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.linkSignup = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.txtEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblPassword = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblEmail = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblLogin = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.btnLogin);
+            this.kryptonPanel1.Controls.Add(this.linkSignup);
+            this.kryptonPanel1.Controls.Add(this.txtEmail);
+            this.kryptonPanel1.Controls.Add(this.txtPassword);
+            this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
+            this.kryptonPanel1.Controls.Add(this.lblPassword);
+            this.kryptonPanel1.Controls.Add(this.lblEmail);
+            this.kryptonPanel1.Controls.Add(this.lblLogin);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.kryptonPanel1.Size = new System.Drawing.Size(486, 409);
+            this.kryptonPanel1.TabIndex = 6;
             // 
             // btnLogin
             // 
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(178, 271);
+            this.btnLogin.Location = new System.Drawing.Point(140, 251);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(300, 42);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Tag = "authButton";
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.Black;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPassword.Location = new System.Drawing.Point(178, 217);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(300, 34);
-            this.txtPassword.TabIndex = 1;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.Black;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtEmail.Location = new System.Drawing.Point(178, 152);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(300, 34);
-            this.txtEmail.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(280, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Log in";
-            this.label1.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
+            this.btnLogin.Size = new System.Drawing.Size(233, 38);
+            this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.SteelBlue;
+            this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.SkyBlue;
+            this.btnLogin.StateCommon.Back.ColorAngle = 45F;
+            this.btnLogin.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StateCommon.Border.Rounding = 20;
+            this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.StateTracking.Back.ColorAngle = 45F;
+            this.btnLogin.StateTracking.Border.Color1 = System.Drawing.Color.DodgerBlue;
+            this.btnLogin.StateTracking.Border.Color2 = System.Drawing.Color.LightSkyBlue;
+            this.btnLogin.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StateTracking.Border.Rounding = 20;
+            this.btnLogin.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Values.Text = "Log in";
             // 
             // linkSignup
             // 
-            this.linkSignup.AutoSize = true;
-            this.linkSignup.BackColor = System.Drawing.Color.Black;
-            this.linkSignup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.linkSignup.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.linkSignup.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkSignup.LinkColor = System.Drawing.Color.WhiteSmoke;
-            this.linkSignup.Location = new System.Drawing.Point(435, 333);
+            this.linkSignup.Location = new System.Drawing.Point(296, 311);
             this.linkSignup.Name = "linkSignup";
-            this.linkSignup.Size = new System.Drawing.Size(43, 13);
-            this.linkSignup.TabIndex = 4;
-            this.linkSignup.TabStop = true;
-            this.linkSignup.Text = "Sign up";
-            this.linkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignup_LinkClicked);
+            this.linkSignup.Size = new System.Drawing.Size(52, 20);
+            this.linkSignup.StateCommon.ShortText.Color1 = System.Drawing.Color.LightGray;
+            this.linkSignup.StateCommon.ShortText.Color2 = System.Drawing.Color.LightGray;
+            this.linkSignup.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkSignup.TabIndex = 2;
+            this.linkSignup.Values.Text = "Sign up";
             // 
-            // lblEmail
+            // txtEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(177, 136);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblEmail.TabIndex = 5;
-            this.lblEmail.Text = "Email";
+            this.txtEmail.Location = new System.Drawing.Point(140, 103);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(233, 39);
+            this.txtEmail.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.txtEmail.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
+            this.txtEmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtEmail.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtEmail.StateCommon.Border.Rounding = 20;
+            this.txtEmail.StateCommon.Border.Width = 2;
+            this.txtEmail.TabIndex = 1;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(140, 179);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(233, 39);
+            this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
+            this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
+            this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtPassword.StateCommon.Border.Rounding = 20;
+            this.txtPassword.StateCommon.Border.Width = 2;
+            this.txtPassword.TabIndex = 1;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(152, 311);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(138, 20);
+            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Don\'t have an account?";
             // 
             // lblPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(177, 201);
+            this.lblPassword.Location = new System.Drawing.Point(140, 153);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
-            this.lblPassword.TabIndex = 5;
-            this.lblPassword.Text = "Password";
+            this.lblPassword.Size = new System.Drawing.Size(80, 24);
+            this.lblPassword.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.lblPassword.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.lblPassword.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.TabIndex = 0;
+            this.lblPassword.Values.Text = "Password";
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(283, 333);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Don\'t have an account?";
+            this.lblEmail.Location = new System.Drawing.Point(140, 73);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 24);
+            this.lblEmail.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.lblEmail.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.lblEmail.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Values.Text = "Email";
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.Location = new System.Drawing.Point(215, 25);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(56, 24);
+            this.lblLogin.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.lblLogin.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.lblLogin.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.TabIndex = 0;
+            this.lblLogin.Values.Text = "Log in";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(634, 409);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.linkSignup);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.btnLogin);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(486, 409);
+            this.Controls.Add(this.kryptonPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "AutoDesk";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
+            this.kryptonPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkSignup;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label label4;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblEmail;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblLogin;
+        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel linkSignup;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPassword;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEmail;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
     }
 }
 

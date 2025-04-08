@@ -1,273 +1,226 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using System.Windows.Media.Media3D;
+using MySql.Data.MySqlClient;
 using HelixToolkit.Wpf;
 using System.Windows.Media;
-using System.Windows.Forms.Integration;
-using MySql.Data.MySqlClient;
-using System.Data;
-using System.Globalization;
+using System.Windows.Media.Media3D;
 
 namespace Autodesk_Applicatin
 {
     public partial class EditorUploadForm : Form
     {
+        private readonly string userRole;
+        private readonly string editorEmail;
+
+        private int editingAssetId = -1;
         private string selected3DPath = "";
         private string selected2DPath = "";
-        private int editingAssetId = -1; // -1 means new upload
-        private HelixViewport3D helixViewport;
-        private string userRole;
-        public EditorUploadForm(string role)
+
+        public EditorUploadForm(string role, string email)
         {
             InitializeComponent();
             userRole = role;
-            Initialize3DViewer();
-        }
-
-        private void Initialize3DViewer()
-        {
-            helixViewport = new HelixViewport3D
-            {
-                Background = Brushes.LightGray,
-                ZoomExtentsWhenLoaded = true,
-                ShowViewCube = false,
-                ShowCoordinateSystem = false,
-                IsHeadLightEnabled = true
-            };
-
-            elementHost3D.Child = helixViewport;
-        }
-        // Loading 3D Model from file
-        private Model3D LoadModelFromFile(string filePath)
-        {
-            try
-            {
-                if (File.Exists(filePath))
-                {
-                    var importer = new ObjReader(); // Works best for .obj files
-                    return importer.Read(filePath);
-                }
-                else
-                {
-                    MessageBox.Show("3D model file not found at:\n" + filePath, "Missing File", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return null;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load 3D model:\n" + ex.Message, "Import Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
-
-        // Call this when editing
-        public void LoadAssetForEditing(int assetId, string name, string description, string imagePath, string modelPath)
-        {
-            // Store the asset ID for later update
-            this.editingAssetId = assetId;
-
-            // Populate fields
-            txtAssetName.Text = name;
-            txtAssetDescription.Text = description;
-            selected2DPath = imagePath;
-            lbl2dPreviewPath.Text = $"Image Path: {selected2DPath}";
-            selected3DPath = modelPath;
-            lbl3dPreviewPath.Text = $"Model Path: {selected3DPath}";
-
-            // Show 2D preview
-            if (File.Exists(imagePath))
-            {
-                picAssetPreview.ImageLocation = imagePath;
-                picAssetPreview.SizeMode = PictureBoxSizeMode.Zoom;
-            }
-            else
-            {
-                picAssetPreview.Image = null;
-            }
-
-            // Show 3D preview
-            if (File.Exists(modelPath))
-            {
-                var model = LoadModelFromFile(modelPath);
-                if (model != null)
-                {
-                    var modelVisual = new ModelVisual3D { Content = model };
-                    helixViewport.Children.Clear();
-                    helixViewport.Children.Add(modelVisual);
-                    helixViewport.Children.Add(new DefaultLights());
-                    helixViewport.ZoomExtents();
-                }
-            }
-
-            // Update button label
-            btnUpload.Text = "Update Asset";
-        }
-
-
-        private void btnSelect2D_Click(object sender, EventArgs e)
-        {
-            openFileDialog.Filter = "Image Files|*.jpg;*.png;*.jpeg";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                selected2DPath = openFileDialog.FileName;
-                picAssetPreview.ImageLocation = selected2DPath;
-            }
-        }
-
-        private void btnSelect3D_Click(object sender, EventArgs e)
-        {
-            openFileDialog.Filter = "3D Model Files|*.obj";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                selected3DPath = openFileDialog.FileName;
-                Load3DModel(selected3DPath);
-            }
-        }
-
-        private void Load3DModel(string path)
-        {
-            try
-            {
-                helixViewport.Children.Clear();
-                var model = new ObjReader().Read(path);
-                if (model != null)
-                {
-                    helixViewport.Children.Add(new ModelVisual3D { Content = model });
-                    helixViewport.Children.Add(new DefaultLights());
-                    helixViewport.ZoomExtents();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load 3D model: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnUpload_Click(object sender, EventArgs e)
-        {
-            if (!ValidateFields()) return;
-
-            string assetName = txtAssetName.Text.Trim();
-            string description = txtAssetDescription.Text.Trim();
-
-            // Copy files to Assets folder
-            string assetsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets");
-            Directory.CreateDirectory(assetsFolder);
-
-            string newImagePath = Path.Combine("Assets", Path.GetFileName(selected2DPath));
-            string newModelPath = Path.Combine("Assets", Path.GetFileName(selected3DPath));
-
-            File.Copy(selected2DPath, Path.Combine(assetsFolder, Path.GetFileName(selected2DPath)), true);
-            File.Copy(selected3DPath, Path.Combine(assetsFolder, Path.GetFileName(selected3DPath)), true);
-
-            using (MySqlConnection conn = DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-
-                string query = editingAssetId == -1
-                    ? "INSERT INTO Assets (AssetName, AssetDescription, AssetImagePath, AssetFilePath, DateAdded) VALUES (@name, @desc, @image, @model, NOW())"
-                    : "UPDATE Assets SET AssetName = @name, AssetDescription = @desc, AssetImagePath = @image, AssetFilePath = @model WHERE AssetID = @id";
-
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@name", assetName);
-                cmd.Parameters.AddWithValue("@desc", description);
-                cmd.Parameters.AddWithValue("@image", newImagePath);
-                cmd.Parameters.AddWithValue("@model", newModelPath);
-
-                if (editingAssetId != -1)
-                    cmd.Parameters.AddWithValue("@id", editingAssetId);
-
-                cmd.ExecuteNonQuery();
-            }
-
-            MessageBox.Show(editingAssetId == -1 ? "Asset uploaded successfully!" : "Asset updated successfully!");
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private bool ValidateFields()
-        {
-            if (string.IsNullOrWhiteSpace(txtAssetName.Text) ||
-                string.IsNullOrWhiteSpace(txtAssetDescription.Text) ||
-                string.IsNullOrWhiteSpace(selected2DPath) ||
-                string.IsNullOrWhiteSpace(selected3DPath))
-            {
-                MessageBox.Show("Please fill in all fields and select both 2D and 3D files.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;
-        }
-
-        private void Load3DPreview(string modelPath)
-        {
-            try
-            {
-                if (File.Exists(modelPath))
-                {
-                    var importer = new ObjReader();
-                    var model = importer.Read(modelPath);
-
-                    var modelVisual = new ModelVisual3D { Content = model };
-
-                    var helixViewport = new HelixViewport3D
-                    {
-                        Background = Brushes.LightGray,
-                        ShowCoordinateSystem = false,
-                        ShowCameraInfo = false,
-                        ShowViewCube = false,
-                        IsHeadLightEnabled = true
-                    };
-
-                    helixViewport.Children.Add(new DefaultLights());
-                    helixViewport.Children.Add(modelVisual);
-                    helixViewport.ZoomExtents();
-
-                    // Display in the ElementHost
-                    elementHost3D.Child = helixViewport;
-                }
-                else
-                {
-                    MessageBox.Show("3D file not found.", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading 3D model:\n" + ex.Message, "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void btnSelect3D_Click_1(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Filter = "3D Model Files (*.obj)|*.obj";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    lbl3dPreviewPath.Text = ofd.FileName;
-                    Load3DPreview(ofd.FileName); // assumes LoadModelFromFile logic here
-                }
-            }
-        }
-
-        private void btnSelect2D_Click_1(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Filter = "Image Files (*.png;*.jpg)|*.png;*.jpg";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    lbl2dPreviewPath.Text = ofd.FileName;
-                    picAssetPreview.ImageLocation = ofd.FileName;
-                    picAssetPreview.SizeMode = PictureBoxSizeMode.Zoom;
-                }
-            }
+            editorEmail = email;
         }
 
         private void EditorUploadForm_Load(object sender, EventArgs e)
         {
             UIStyleHelper.StyleAllControls(this);
+
+            txtAssetDescription.Multiline = true;
+            txtAssetDescription.ScrollBars = ScrollBars.Vertical;
+            txtAssetDescription.WordWrap = true;
+
+        }
+
+        // 🔍 Select 3D File (.obj)
+        private void btnSelect3D_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "3D Models (*.obj)|*.obj";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    selected3DPath = ofd.FileName;
+                    lbl3dPreviewPath.Text = Path.GetFileName(selected3DPath);
+                    Load3DModelPreview(selected3DPath);
+                }
+            }
+        }
+
+        // 🎯 Load 3D Preview (Improved version)
+        private void Load3DModelPreview(string path)
+        {
+            try
+            {
+                var modelImporter = new ModelImporter();
+                var model = modelImporter.Load(path);
+
+                var viewport = new HelixViewport3D
+                {
+                    //Background = System.Windows.Media.Brushes.White,
+                    ShowCoordinateSystem = false,
+                    ShowViewCube = false,
+                    ZoomExtentsWhenLoaded = true,
+                    IsHeadLightEnabled = true,
+                    ShowCameraInfo = false,
+                    ShowFrameRate = false
+                };
+
+                viewport.Children.Add(new DefaultLights());
+                viewport.Children.Add(new ModelVisual3D { Content = model });
+
+                // Center the camera
+                var bounds = model.Bounds;
+                var center = bounds.Location + new Vector3D(bounds.SizeX / 2, bounds.SizeY / 2, bounds.SizeZ / 2);
+
+                viewport.Camera = new PerspectiveCamera
+                {
+                    Position = center + new Vector3D(0, 0, bounds.SizeZ * 2),
+                    LookDirection = new Vector3D(0, 0, -bounds.SizeZ * 2),
+                    UpDirection = new Vector3D(0, 1, 0),
+                    FieldOfView = 45
+                };
+
+                elementHost3D.Child = viewport;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load 3D model: " + ex.Message);
+            }
+        }
+
+        // 🖼️ Select 2D Image (PNG/JPG)
+        private void btnSelect2D_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Images (*.png;*.jpg)|*.png;*.jpg";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    selected2DPath = ofd.FileName;
+                    lbl2dPreviewPath.Text = Path.GetFileName(selected2DPath);
+                    picAssetPreview.Image = Image.FromFile(selected2DPath);
+                }
+            }
+        }
+
+        // ⬆ Upload or Update to MySQL
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            string name = txtAssetName.Text.Trim();
+            string description = txtAssetDescription.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrEmpty(description) || string.IsNullOrEmpty(selected3DPath) || string.IsNullOrEmpty(selected2DPath))
+            {
+                MessageBox.Show("Please fill in all required fields and select files.");
+                return;
+            }
+
+            string assetsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets");
+            Directory.CreateDirectory(assetsFolder);
+
+            string new3DPath = Path.Combine("Assets", $"{Guid.NewGuid()}.obj");
+            string new2DPath = Path.Combine("Assets", $"{Guid.NewGuid()}.png");
+
+            File.Copy(selected3DPath, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, new3DPath), true);
+            File.Copy(selected2DPath, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, new2DPath), true);
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+
+                string query;
+                if (editingAssetId == -1)
+                {
+                    query = @"INSERT INTO Assets (AssetName, AssetDescription, AssetFilePath, AssetImagePath, DateAdded, status, status_updated_by, status_updated_at, EditorEmail)
+                              VALUES (@name, @desc, @filePath, @imagePath, NOW(), 'Pending', @editor, NOW(), @editor)";
+                }
+                else
+                {
+                    query = @"UPDATE Assets 
+                              SET AssetName = @name, 
+                                  AssetDescription = @desc, 
+                                  AssetFilePath = @filePath, 
+                                  AssetImagePath = @imagePath, 
+                                  status = 'Pending',
+                                  status_updated_by = @editor,
+                                  status_updated_at = NOW()
+                              WHERE AssetID = @id";
+                }
+
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@desc", description);
+                    cmd.Parameters.AddWithValue("@filePath", new3DPath);
+                    cmd.Parameters.AddWithValue("@imagePath", new2DPath);
+                    cmd.Parameters.AddWithValue("@editor", editorEmail);
+
+                    if (editingAssetId != -1)
+                        cmd.Parameters.AddWithValue("@id", editingAssetId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show("Asset uploaded successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+            var dashboard = new EditorDashboard(userRole, editorEmail);
+            dashboard.TopLevel = false;
+            dashboard.FormBorderStyle = FormBorderStyle.None;
+            dashboard.Dock = DockStyle.Fill;
+
+            var parentPanel = this.Parent as Panel; // Assuming it's loaded inside pnlEditor
+            if (parentPanel != null)
+            {
+                parentPanel.Controls.Clear();
+                parentPanel.Controls.Add(dashboard);
+                dashboard.Show();
+            }
+
+        }
+
+        // 🛠️ Load data for edit mode
+        public void LoadAssetForEditing(int assetId, string name, string description, string imagePath, string modelPath)
+        {
+            editingAssetId = assetId;
+            txtAssetName.Text = name;
+            txtAssetDescription.Text = description;
+
+            selected2DPath = imagePath;
+            selected3DPath = modelPath;
+
+            // Hide path labels
+            lbl2dPreviewPath.Visible = false;
+            lbl3dPreviewPath.Visible = false;
+
+            // Enable file selection buttons so the editor can replace assets
+            btnSelect2D.Enabled = true;
+            btnSelect3D.Enabled = true;
+
+            // Preview existing 2D image
+            if (File.Exists(imagePath))
+                picAssetPreview.Image = Image.FromFile(imagePath);
+
+            // Preview existing 3D model
+            if (File.Exists(modelPath))
+                Load3DModelPreview(modelPath);
+
+            // Title change
+            lblTitleText.Text = "Edit Asset";
+            // Optionally change btnUpload to reflect edit mode
+            btnUpload.Text = "Save Changes";
+        }
+
+
+
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Autodesk_Applicatin
             // 👉 Only apply width/height if Tag is "authButton"
             if (btn.Tag?.ToString() == "authButton")
             {
-                btn.Width = 160;
+                btn.Width = 300;
                 btn.Height = 40;
             }
             // Step 3️⃣: Mouse hover effects

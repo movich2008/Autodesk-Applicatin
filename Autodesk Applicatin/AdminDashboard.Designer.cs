@@ -98,14 +98,14 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(200, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(626, 587);
+            this.pnlMain.Size = new System.Drawing.Size(974, 587);
             this.pnlMain.TabIndex = 1;
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 587);
+            this.ClientSize = new System.Drawing.Size(1174, 587);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlSidebar);
             this.Name = "AdminDashboard";
