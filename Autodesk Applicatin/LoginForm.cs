@@ -164,7 +164,5 @@ namespace Autodesk_Applicatin
             Signup signupForm = new Signup();
             signupForm.Show();
         }
-
-       
     }
 }

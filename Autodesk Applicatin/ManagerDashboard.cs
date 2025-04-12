@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 
@@ -90,8 +91,7 @@ namespace Autodesk_Applicatin
 
             var combo = sender as ComboBox;
             string newStatus = combo?.SelectedItem?.ToString();
-            if (string.IsNullOrEmpty(newStatus))
-                return;
+            if (string.IsNullOrEmpty(newStatus)) return;
 
             DataGridViewRow row = dgvAssets.CurrentRow;
             int assetID = Convert.ToInt32(row.Cells["AssetID"].Value);
@@ -103,14 +103,13 @@ namespace Autodesk_Applicatin
                 return;
             }
 
-            if (newStatus == previousStatus)
-                return;
+            if (newStatus == previousStatus) return;
 
             if (newStatus == "Rejected")
             {
                 var noteForm = new RejectionNoteForm(assetID, editorEmail, managerEmail);
                 if (noteForm.ShowDialog() == DialogResult.OK)
-                    this.BeginInvoke(new Action(() => LoadAssets()));
+                    this.BeginInvoke(new Action(() => LoadAssets(cmbStatusFilter.SelectedItem.ToString())));
                 else
                     row.Cells["status"].Value = previousStatus;
             }
@@ -121,7 +120,7 @@ namespace Autodesk_Applicatin
                     : "";
 
                 UpdateAssetStatusWithNote(assetID, newStatus, message, editorEmail);
-                this.BeginInvoke(new Action(() => LoadAssets()));
+                this.BeginInvoke(new Action(() => LoadAssets(cmbStatusFilter.SelectedItem.ToString())));
             }
         }
 
@@ -144,6 +143,9 @@ namespace Autodesk_Applicatin
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
+
+                    dgvAssets.DataSource = table;
+
                     int columnCount = dgvAssets.Columns.Count;
                     if (columnCount > 0)
                     {
@@ -152,12 +154,11 @@ namespace Autodesk_Applicatin
 
                         foreach (DataGridViewColumn col in dgvAssets.Columns)
                         {
-                            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None; // Disable auto
+                            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                             col.Width = equalWidth;
                         }
                     }
 
-                    dgvAssets.DataSource = table;
                     ConvertStatusColumnToComboBox();
                     UpdateCardStats();
                 }
@@ -245,11 +246,13 @@ namespace Autodesk_Applicatin
                         cmd.Parameters.AddWithValue("@status", status);
 
                     if (!string.IsNullOrEmpty(searchTerm))
-                        cmd.Parameters.AddWithValue("@search", $"%{searchTerm}%");
+                        cmd.Parameters.AddWithValue("@search", $"%{searchTerm.ToLower()}%");
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
+                    dgvAssets.DataSource = table;
+
                     int columnCount = dgvAssets.Columns.Count;
                     if (columnCount > 0)
                     {
@@ -258,12 +261,11 @@ namespace Autodesk_Applicatin
 
                         foreach (DataGridViewColumn col in dgvAssets.Columns)
                         {
-                            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None; // Disable auto
+                            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                             col.Width = equalWidth;
                         }
                     }
 
-                    dgvAssets.DataSource = table;
                     ConvertStatusColumnToComboBox();
                     UpdateCardStats();
                 }

@@ -127,7 +127,7 @@
   <data name="picNotificationBell.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAA/7JJREFUeF7sfQeYXEeR/xvZsjbvzuyujAM44GzlLCvH3dkgRzlKVtwg7SpsnJXB
+        vgAADr4B6kKxwAAA/7JJREFUeF7sfQeYXEeR/xvZsjbvzuyujAM44GzlLCvH3dkgRzlKVtwg7SpsnJXB
         WHAch8ncke8wliwnMBw5mD+2lSUHbDBwiSMfHAccwZY2ztT/q+6u7up+s75kmVS/7+tv3uvX6fXM9K+r
         uro6igQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAI
         BAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFA
@@ -1486,4 +1486,7 @@
         7wDChau6AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>67</value>
+  </metadata>
 </root>

@@ -22,7 +22,7 @@ namespace Autodesk_Applicatin
            editorEmail = email;
         }
 
-        private void KryptonEditorDashboard_Load(object sender, EventArgs e)
+        private void EditorDashboard_Load(object sender, EventArgs e)
         {
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
             gp.AddEllipse(0, 0, lblNotificationCount.Width, lblNotificationCount.Height);
@@ -352,6 +352,5 @@ namespace Autodesk_Applicatin
             //  Populate fields and show previews
             editForm.LoadAssetForEditing(assetId, name, description, imagePath, modelPath);
         }
-
     }
 }

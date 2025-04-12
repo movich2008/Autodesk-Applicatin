@@ -56,18 +56,20 @@
             this.kryptonPanel1.Controls.Add(this.lblLogin);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kryptonPanel1.Size = new System.Drawing.Size(486, 409);
+            this.kryptonPanel1.Size = new System.Drawing.Size(648, 503);
             this.kryptonPanel1.TabIndex = 6;
             // 
             // btnLogin
             // 
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Location = new System.Drawing.Point(140, 251);
+            this.btnLogin.Location = new System.Drawing.Point(187, 309);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.btnLogin.Size = new System.Drawing.Size(233, 38);
+            this.btnLogin.Size = new System.Drawing.Size(311, 47);
             this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.SteelBlue;
             this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.SkyBlue;
             this.btnLogin.StateCommon.Back.ColorAngle = 45F;
@@ -86,12 +88,14 @@
             this.btnLogin.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Values.Text = "Log in";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkSignup
             // 
-            this.linkSignup.Location = new System.Drawing.Point(296, 311);
+            this.linkSignup.Location = new System.Drawing.Point(395, 383);
+            this.linkSignup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linkSignup.Name = "linkSignup";
-            this.linkSignup.Size = new System.Drawing.Size(52, 20);
+            this.linkSignup.Size = new System.Drawing.Size(63, 24);
             this.linkSignup.StateCommon.ShortText.Color1 = System.Drawing.Color.LightGray;
             this.linkSignup.StateCommon.ShortText.Color2 = System.Drawing.Color.LightGray;
             this.linkSignup.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,9 +104,10 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(140, 103);
+            this.txtEmail.Location = new System.Drawing.Point(187, 127);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(233, 39);
+            this.txtEmail.Size = new System.Drawing.Size(311, 43);
             this.txtEmail.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
             this.txtEmail.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
             this.txtEmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -115,9 +120,10 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(140, 179);
+            this.txtPassword.Location = new System.Drawing.Point(187, 220);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(233, 39);
+            this.txtPassword.Size = new System.Drawing.Size(311, 43);
             this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.LightGray;
             this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
             this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -130,9 +136,10 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(152, 311);
+            this.kryptonLabel1.Location = new System.Drawing.Point(203, 383);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(138, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(171, 24);
             this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
             this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,9 +148,10 @@
             // 
             // lblPassword
             // 
-            this.lblPassword.Location = new System.Drawing.Point(140, 153);
+            this.lblPassword.Location = new System.Drawing.Point(187, 188);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(80, 24);
+            this.lblPassword.Size = new System.Drawing.Size(99, 30);
             this.lblPassword.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
             this.lblPassword.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
             this.lblPassword.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,9 +160,10 @@
             // 
             // lblEmail
             // 
-            this.lblEmail.Location = new System.Drawing.Point(140, 73);
+            this.lblEmail.Location = new System.Drawing.Point(187, 90);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 24);
+            this.lblEmail.Size = new System.Drawing.Size(62, 30);
             this.lblEmail.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
             this.lblEmail.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
             this.lblEmail.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,9 +172,10 @@
             // 
             // lblLogin
             // 
-            this.lblLogin.Location = new System.Drawing.Point(215, 25);
+            this.lblLogin.Location = new System.Drawing.Point(287, 31);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(56, 24);
+            this.lblLogin.Size = new System.Drawing.Size(69, 30);
             this.lblLogin.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
             this.lblLogin.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
             this.lblLogin.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,12 +184,13 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(486, 409);
+            this.ClientSize = new System.Drawing.Size(648, 503);
             this.Controls.Add(this.kryptonPanel1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoDesk";
