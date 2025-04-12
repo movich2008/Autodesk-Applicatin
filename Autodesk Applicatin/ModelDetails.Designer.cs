@@ -47,12 +47,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dtpCreatedOn = new System.Windows.Forms.DateTimePicker();
             this.dtpModifiedOn = new System.Windows.Forms.DateTimePicker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBxPreview)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(356, 80);
+            this.label1.Location = new System.Drawing.Point(382, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 42);
             this.label1.TabIndex = 0;
@@ -138,10 +140,10 @@
             // 
             // picBxPreview
             // 
-            this.picBxPreview.Location = new System.Drawing.Point(605, 169);
+            this.picBxPreview.Location = new System.Drawing.Point(616, 183);
             this.picBxPreview.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.picBxPreview.Name = "picBxPreview";
-            this.picBxPreview.Size = new System.Drawing.Size(300, 292);
+            this.picBxPreview.Size = new System.Drawing.Size(382, 347);
             this.picBxPreview.TabIndex = 13;
             this.picBxPreview.TabStop = false;
             // 
@@ -150,33 +152,32 @@
             this.txtbxSaveDetails.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtbxSaveDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxSaveDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtbxSaveDetails.Location = new System.Drawing.Point(101, 464);
+            this.txtbxSaveDetails.Location = new System.Drawing.Point(168, 507);
             this.txtbxSaveDetails.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtbxSaveDetails.Name = "txtbxSaveDetails";
             this.txtbxSaveDetails.Size = new System.Drawing.Size(165, 55);
             this.txtbxSaveDetails.TabIndex = 14;
             this.txtbxSaveDetails.Text = "Save Details";
             this.txtbxSaveDetails.UseVisualStyleBackColor = false;
-          
+            // 
             // txtxbxUploadImage
             // 
             this.txtxbxUploadImage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtxbxUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtxbxUploadImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtxbxUploadImage.Location = new System.Drawing.Point(665, 497);
+            this.txtxbxUploadImage.Location = new System.Drawing.Point(712, 551);
             this.txtxbxUploadImage.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtxbxUploadImage.Name = "txtxbxUploadImage";
             this.txtxbxUploadImage.Size = new System.Drawing.Size(165, 55);
             this.txtxbxUploadImage.TabIndex = 15;
             this.txtxbxUploadImage.Text = "Upload Image";
             this.txtxbxUploadImage.UseVisualStyleBackColor = false;
-           
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(676, 128);
+            this.label8.Location = new System.Drawing.Point(737, 135);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 25);
             this.label8.TabIndex = 16;
@@ -265,6 +266,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.maskedTextBox2);
             this.panel2.Controls.Add(this.label17);
@@ -274,9 +277,41 @@
             this.panel2.Size = new System.Drawing.Size(1035, 74);
             this.panel2.TabIndex = 17;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(960, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 37);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "🇬🇧";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(852, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 29);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Sign in";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.Image = global::Autodesk_Applicatin.Properties.Resources.autodesk_logo_black_transparent11;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 42);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(709, 32);
+            this.maskedTextBox2.Location = new System.Drawing.Point(286, 23);
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(211, 26);
             this.maskedTextBox2.TabIndex = 13;
@@ -287,7 +322,7 @@
             this.label17.BackColor = System.Drawing.SystemColors.Control;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(926, 29);
+            this.label17.Location = new System.Drawing.Point(517, 23);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(27, 29);
             this.label17.TabIndex = 12;
@@ -317,16 +352,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Image = global::Autodesk_Applicatin.Properties.Resources.autodesk_logo_black_transparent11;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 42);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -339,7 +364,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1038, 690);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dtpModifiedOn);
@@ -399,5 +424,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

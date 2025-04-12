@@ -10,9 +10,14 @@ namespace Autodesk_Applicatin
             InitializeComponent();
         }
 
-        private void AssetGalleryForm_Load(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UIStyleHelper.StyleAllControls(this);
+
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

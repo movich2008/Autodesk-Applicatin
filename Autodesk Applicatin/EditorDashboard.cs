@@ -352,5 +352,13 @@ namespace Autodesk_Applicatin
             //  Populate fields and show previews
             editForm.LoadAssetForEditing(assetId, name, description, imagePath, modelPath);
         }
+
+        private void  pnlEditor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+     
+
     }
 }

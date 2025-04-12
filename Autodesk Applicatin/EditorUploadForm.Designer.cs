@@ -110,11 +110,13 @@
             // 
             // pnlUpload
             // 
+            this.pnlUpload.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pnlUpload.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlUpload.Controls.Add(this.label1);
             this.pnlUpload.Controls.Add(this.pnlWrapper);
             this.pnlUpload.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlUpload.Location = new System.Drawing.Point(0, 0);
+            this.pnlUpload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlUpload.Name = "pnlUpload";
             this.pnlUpload.Size = new System.Drawing.Size(626, 634);
             this.pnlUpload.TabIndex = 0;
@@ -528,10 +530,11 @@
             // 
             // EditorUploadForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 634);
             this.Controls.Add(this.pnlUpload);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditorUploadForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditorUploadForm";

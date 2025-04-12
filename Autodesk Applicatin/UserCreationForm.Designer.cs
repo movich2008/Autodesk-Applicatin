@@ -29,12 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblFullName = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new Krypton.Toolkit.KryptonButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
+            this.btnSaveUser = new Krypton.Toolkit.KryptonButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblRole = new System.Windows.Forms.Label();
             this.cmbUserRole = new System.Windows.Forms.ComboBox();
@@ -49,7 +57,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitle
+            // panel1
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -60,7 +68,7 @@
             this.lblTitle.Text = "Create New User";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblFullName
+            // pictureBox1
             // 
             this.lblFullName.AutoSize = true;
             this.lblFullName.Dock = System.Windows.Forms.DockStyle.Left;
@@ -71,6 +79,55 @@
             this.lblFullName.Text = "Full Name:";
             this.lblFullName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(1145, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 37);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "🇬🇧";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(305, 14);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(211, 26);
+            this.maskedTextBox1.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(534, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 29);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "⌕";
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(1218, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.TabIndex = 21;
+            this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.label14.Values.Text = "Log in";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 80);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Full Name";
+            // 
             // txtFullName
             // 
             this.txtFullName.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,7 +136,7 @@
             this.txtFullName.Size = new System.Drawing.Size(293, 20);
             this.txtFullName.TabIndex = 2;
             // 
-            // lblEmail
+            // label3
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Left;
@@ -98,7 +155,7 @@
             this.txtEmail.Size = new System.Drawing.Size(293, 20);
             this.txtEmail.TabIndex = 2;
             // 
-            // lblPassword
+            // btnSaveUser
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Dock = System.Windows.Forms.DockStyle.Left;
@@ -118,7 +175,7 @@
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // lblRole
+            // label4
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Dock = System.Windows.Forms.DockStyle.Left;
@@ -150,7 +207,7 @@
             this.btnSaveUser.UseVisualStyleBackColor = true;
             this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
-            // lblMessage
+            // label6
             // 
             this.lblMessage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMessage.AutoSize = true;
@@ -185,7 +242,7 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label1.Visible = false;
             // 
-            // tableLayoutPanel1
+            // label7
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.84615F));
@@ -234,7 +291,7 @@
             // 
             // UserCreationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 498);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -250,13 +307,22 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblFullName;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label10;
+        private Krypton.Toolkit.KryptonButton label14;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtFullName;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblPassword;
+        private Krypton.Toolkit.KryptonButton btnSaveUser;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.ComboBox cmbUserRole;

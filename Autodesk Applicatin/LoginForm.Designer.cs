@@ -182,6 +182,52 @@
             this.lblLogin.TabIndex = 0;
             this.lblLogin.Values.Text = "Log in";
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(26, 363);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(449, 48);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btnLogin.Values.Text = "Login";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.linkLabel2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.lblPassword);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblEmail);
+            this.panel1.Location = new System.Drawing.Point(189, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(513, 500);
+            this.panel1.TabIndex = 7;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(176, 316);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(137, 20);
+            this.linkLabel2.TabIndex = 8;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Forget password?";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(434, 462);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(67, 20);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Sign up!";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

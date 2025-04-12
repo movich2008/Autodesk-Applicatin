@@ -28,34 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flpAssets = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // flpAssets
-            // 
-            this.flpAssets.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpAssets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpAssets.Location = new System.Drawing.Point(0, 0);
-            this.flpAssets.Name = "flpAssets";
-            this.flpAssets.Size = new System.Drawing.Size(800, 450);
-            this.flpAssets.TabIndex = 0;
             // 
             // AssetGalleryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flpAssets);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1264, 764);
             this.Name = "AssetGalleryForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "AssetGalleryForm";
-            this.Load += new System.EventHandler(this.AssetGalleryForm_Load);
+            this.Text = "Form1";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public System.Windows.Forms.FlowLayoutPanel flpAssets;
     }
 }

@@ -198,5 +198,15 @@ namespace Autodesk_Applicatin
             elementHost.Dock = DockStyle.Fill;
             LoadAssetFromDatabase(currentAssetID);
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void elementHost_ChildChanged(object sender, ChildChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -928,6 +928,92 @@
             this.btnLogout.Values.Text = "LogOut";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1478, 77);
+            this.panel2.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(1076, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.TabIndex = 21;
+            this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.label14.Values.Text = "Log in";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(601, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(347, 42);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Manager Dashboard";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.Image = global::Autodesk_Applicatin.Properties.Resources.autodesk_logo_black_transparent1;
+            this.pictureBox1.Location = new System.Drawing.Point(-9, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(253, 39);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(1009, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 37);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "🇬🇧";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(274, 10);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(211, 26);
+            this.maskedTextBox1.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(512, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 29);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "⌕";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(1014, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 29);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "⌕";
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

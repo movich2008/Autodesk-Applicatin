@@ -489,6 +489,32 @@
             this.picAssetViewer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAssetViewer.TabIndex = 1;
             this.picAssetViewer.TabStop = false;
+          
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1405, 67);
+            this.panel2.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(707, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(299, 42);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Editor Dashboard";
             // 
             // pnlEditorButtons
             // 
