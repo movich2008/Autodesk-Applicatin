@@ -32,11 +32,11 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +57,7 @@
             this.btnSend.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSend.Location = new System.Drawing.Point(377, 509);
+            this.btnSend.Location = new System.Drawing.Point(362, 499);
             this.btnSend.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(365, 57);
@@ -90,6 +90,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1095, 74);
             this.panel2.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(596, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(259, 42);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Rejection Note";
             // 
             // label3
             // 
@@ -130,17 +141,6 @@
             this.label17.Size = new System.Drawing.Size(27, 29);
             this.label17.TabIndex = 12;
             this.label17.Text = "⌕";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(596, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(259, 42);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Rejection Note";
             // 
             // kryptonLabel1
             // 
