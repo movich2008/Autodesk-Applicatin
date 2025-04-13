@@ -48,7 +48,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.dtpModifiedOn = new System.Windows.Forms.DateTimePicker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.picBxPreview)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -140,7 +140,7 @@
             // 
             // picBxPreview
             // 
-            this.picBxPreview.Location = new System.Drawing.Point(616, 183);
+            this.picBxPreview.Location = new System.Drawing.Point(632, 127);
             this.picBxPreview.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.picBxPreview.Name = "picBxPreview";
             this.picBxPreview.Size = new System.Drawing.Size(382, 347);
@@ -165,7 +165,7 @@
             this.txtxbxUploadImage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtxbxUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtxbxUploadImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtxbxUploadImage.Location = new System.Drawing.Point(712, 551);
+            this.txtxbxUploadImage.Location = new System.Drawing.Point(742, 507);
             this.txtxbxUploadImage.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtxbxUploadImage.Name = "txtxbxUploadImage";
             this.txtxbxUploadImage.Size = new System.Drawing.Size(165, 55);
@@ -177,7 +177,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(737, 135);
+            this.label8.Location = new System.Drawing.Point(752, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 25);
             this.label8.TabIndex = 16;
@@ -266,8 +266,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.kryptonButton1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.maskedTextBox2);
             this.panel2.Controls.Add(this.label17);
@@ -282,22 +282,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(960, 7);
+            this.label3.Location = new System.Drawing.Point(829, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 37);
             this.label3.TabIndex = 16;
             this.label3.Text = "🇬🇧";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(852, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 29);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Sign in";
             // 
             // pictureBox1
             // 
@@ -359,6 +348,15 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(141, 28);
             this.comboBox1.TabIndex = 19;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(918, 0);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(117, 74);
+            this.kryptonButton1.TabIndex = 17;
+            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kryptonButton1.Values.Text = "Log In";
             // 
             // ModelDetails
             // 
@@ -424,7 +422,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
