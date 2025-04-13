@@ -201,7 +201,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(591, 12);
+            this.label5.Location = new System.Drawing.Point(594, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(336, 42);
             this.label5.TabIndex = 23;

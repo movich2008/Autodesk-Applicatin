@@ -80,5 +80,9 @@ namespace Autodesk_Applicatin
             txtNote.Focus();
         }
 
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
