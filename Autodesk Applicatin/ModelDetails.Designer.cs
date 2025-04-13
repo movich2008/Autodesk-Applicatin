@@ -165,10 +165,10 @@
             this.txtxbxUploadImage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtxbxUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtxbxUploadImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtxbxUploadImage.Location = new System.Drawing.Point(742, 507);
+            this.txtxbxUploadImage.Location = new System.Drawing.Point(740, 502);
             this.txtxbxUploadImage.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtxbxUploadImage.Name = "txtxbxUploadImage";
-            this.txtxbxUploadImage.Size = new System.Drawing.Size(165, 55);
+            this.txtxbxUploadImage.Size = new System.Drawing.Size(168, 65);
             this.txtxbxUploadImage.TabIndex = 15;
             this.txtxbxUploadImage.Text = "Upload Image";
             this.txtxbxUploadImage.UseVisualStyleBackColor = false;

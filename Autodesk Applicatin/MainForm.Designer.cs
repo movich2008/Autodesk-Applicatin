@@ -83,7 +83,7 @@
             // 
             // kryptonLinkLabel3
             // 
-            this.kryptonLinkLabel3.Location = new System.Drawing.Point(181, 184);
+            this.kryptonLinkLabel3.Location = new System.Drawing.Point(181, 204);
             this.kryptonLinkLabel3.Name = "kryptonLinkLabel3";
             this.kryptonLinkLabel3.Size = new System.Drawing.Size(122, 29);
             this.kryptonLinkLabel3.TabIndex = 5;
@@ -133,7 +133,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(682, 6);
+            this.label2.Location = new System.Drawing.Point(661, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 42);
             this.label2.TabIndex = 23;
@@ -141,9 +141,9 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(1035, 3);
+            this.label14.Location = new System.Drawing.Point(1032, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.Size = new System.Drawing.Size(134, 69);
             this.label14.TabIndex = 22;
             this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.label14.Values.Text = "Log in";
@@ -163,7 +163,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(982, 6);
+            this.label12.Location = new System.Drawing.Point(970, 17);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 37);
             this.label12.TabIndex = 11;

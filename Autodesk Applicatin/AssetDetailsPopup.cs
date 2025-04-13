@@ -23,5 +23,10 @@ namespace Autodesk_Applicatin
         {
             UIStyleHelper.StyleAllControls(this);
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

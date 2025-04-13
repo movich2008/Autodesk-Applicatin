@@ -209,9 +209,9 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(1039, 7);
+            this.label14.Location = new System.Drawing.Point(1051, 3);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.Size = new System.Drawing.Size(131, 71);
             this.label14.TabIndex = 22;
             this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.label14.Values.Text = "Log in";
