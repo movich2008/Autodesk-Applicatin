@@ -21,5 +21,10 @@ namespace Autodesk_Applicatin
         {
             UIStyleHelper.StyleAllControls(this);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

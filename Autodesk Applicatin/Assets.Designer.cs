@@ -46,9 +46,16 @@
             this.kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel8 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel12 = new Krypton.Toolkit.KryptonLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,9 +78,9 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(1076, 10);
+            this.label14.Location = new System.Drawing.Point(1077, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.Size = new System.Drawing.Size(133, 77);
             this.label14.TabIndex = 21;
             this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.label14.Values.Text = "Log in";
@@ -164,12 +171,13 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(232, 238);
+            this.dataGridView1.Location = new System.Drawing.Point(241, 203);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(710, 172);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -208,7 +216,7 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(262, 458);
+            this.kryptonLabel2.Location = new System.Drawing.Point(518, 398);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(134, 29);
             this.kryptonLabel2.TabIndex = 23;
@@ -216,38 +224,101 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.kryptonLabel12);
+            this.groupBox1.Controls.Add(this.kryptonLabel11);
+            this.groupBox1.Controls.Add(this.kryptonLabel10);
+            this.groupBox1.Controls.Add(this.kryptonLabel9);
+            this.groupBox1.Controls.Add(this.kryptonLabel8);
+            this.groupBox1.Controls.Add(this.kryptonLabel7);
+            this.groupBox1.Controls.Add(this.kryptonLabel6);
             this.groupBox1.Controls.Add(this.kryptonLabel5);
             this.groupBox1.Controls.Add(this.kryptonLabel4);
             this.groupBox1.Controls.Add(this.kryptonLabel3);
-            this.groupBox1.Location = new System.Drawing.Point(367, 526);
+            this.groupBox1.Location = new System.Drawing.Point(353, 443);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(466, 167);
+            this.groupBox1.Size = new System.Drawing.Size(466, 218);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
-            // kryptonLabel3
+            // kryptonLabel5
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(24, 24);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(152, 29);
-            this.kryptonLabel3.TabIndex = 0;
-            this.kryptonLabel3.Values.Text = "Status: Approved";
+            this.kryptonLabel5.Location = new System.Drawing.Point(99, 96);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(71, 29);
+            this.kryptonLabel5.TabIndex = 2;
+            this.kryptonLabel5.Values.Text = "Owner: ";
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(24, 72);
+            this.kryptonLabel4.Location = new System.Drawing.Point(99, 50);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(201, 29);
+            this.kryptonLabel4.Size = new System.Drawing.Size(86, 29);
             this.kryptonLabel4.TabIndex = 1;
-            this.kryptonLabel4.Values.Text = "Location: Warehouse A";
+            this.kryptonLabel4.Values.Text = "Location: ";
             // 
-            // kryptonLabel5
+            // kryptonLabel3
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(24, 119);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(185, 29);
-            this.kryptonLabel5.TabIndex = 2;
-            this.kryptonLabel5.Values.Text = "Owner: Team_Design";
+            this.kryptonLabel3.Location = new System.Drawing.Point(103, 15);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(67, 29);
+            this.kryptonLabel3.TabIndex = 0;
+            this.kryptonLabel3.Values.Text = "Status:";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(253, 15);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(93, 29);
+            this.kryptonLabel6.TabIndex = 3;
+            this.kryptonLabel6.Values.Text = "Approved";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(248, 50);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(122, 29);
+            this.kryptonLabel7.TabIndex = 4;
+            this.kryptonLabel7.Values.Text = "Warehouse A";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(248, 96);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(121, 29);
+            this.kryptonLabel8.TabIndex = 5;
+            this.kryptonLabel8.Values.Text = "Team_Design";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(73, 142);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(133, 29);
+            this.kryptonLabel9.TabIndex = 6;
+            this.kryptonLabel9.Values.Text = "Purchase Date:";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(253, 142);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(107, 29);
+            this.kryptonLabel10.TabIndex = 7;
+            this.kryptonLabel10.Values.Text = "01/05/2022";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(84, 189);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(97, 29);
+            this.kryptonLabel11.TabIndex = 8;
+            this.kryptonLabel11.Values.Text = "Condition:";
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Location = new System.Drawing.Point(262, 183);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(84, 29);
+            this.kryptonLabel12.TabIndex = 9;
+            this.kryptonLabel12.Values.Text = "Excellent";
             // 
             // Assets
             // 
@@ -301,5 +372,12 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel5;
         private Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel8;
     }
 }
