@@ -31,13 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,17 +62,38 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new Krypton.Toolkit.KryptonButton();
+            this.kryptonBorderEdge1 = new Krypton.Toolkit.KryptonBorderEdge();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonButton4 = new Krypton.Toolkit.KryptonButton();
+            this.kryptonComboBox1 = new Krypton.Toolkit.KryptonComboBox();
+            this.buttonSpecAny1 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny2 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny3 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny4 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny5 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny6 = new Krypton.Toolkit.ButtonSpecAny();
+            this.kryptonComboBox2 = new Krypton.Toolkit.KryptonComboBox();
+            this.buttonSpecAny7 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny8 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny9 = new Krypton.Toolkit.ButtonSpecAny();
+            this.buttonSpecAny10 = new Krypton.Toolkit.ButtonSpecAny();
+            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            this.kryptonButton5 = new Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(422, 63);
+            this.label1.Location = new System.Drawing.Point(853, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 42);
             this.label1.TabIndex = 2;
@@ -87,39 +104,29 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
-            "ID: 11 - Name: Olivia - Email: olivia@example.com - Role: Contributor",
+            "ID: 11 - Name: Olivia - Email: olivia@example.com - Role: Manager",
             "",
-            "ID: 12 - Name: Ethan - Email: ethan@example.com - Role: Moderator",
+            "ID: 12 - Name: Ethan - Email: ethan@example.com - Role: Editor",
             "",
-            "ID: 13 - Name: Sophia - Email: sophia@example.com - Role: Subscriber",
+            "ID: 13 - Name: Sophia - Email: sophia@example.com - Role: Viewer",
             "",
             "ID: 14 - Name: Liam - Email: liam@example.com - Role: Viewer",
             "",
             "ID: 15 - Name: Ava - Email: ava@example.com - Role: Admin"});
-            this.listBox1.Location = new System.Drawing.Point(323, 551);
+            this.listBox1.Location = new System.Drawing.Point(469, 487);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(538, 204);
             this.listBox1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(532, 514);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Users";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 80);
+            this.label3.Location = new System.Drawing.Point(46, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 25);
+            this.label3.Size = new System.Drawing.Size(234, 25);
             this.label3.TabIndex = 6;
-            this.label3.Text = "User Details";
+            this.label3.Text = "Add new user/delete user";
             // 
             // maskedTextBox1
             // 
@@ -129,50 +136,17 @@
             this.maskedTextBox1.TabIndex = 8;
             this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.Control;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(507, 12);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 29);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "⌕";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(943, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 37);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "🇬🇧";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.kryptonButton1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.maskedTextBox1);
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1159, 51);
+            this.panel1.Size = new System.Drawing.Size(1434, 51);
             this.panel1.TabIndex = 14;
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(1028, 0);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(131, 51);
-            this.kryptonButton1.TabIndex = 19;
-            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.kryptonButton1.Values.Text = "Log in";
             // 
             // pictureBox1
             // 
@@ -188,11 +162,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(903, 77);
+            this.label4.Location = new System.Drawing.Point(1228, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 25);
+            this.label4.Size = new System.Drawing.Size(88, 25);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Delete users";
+            this.label4.Text = "Edit user";
             // 
             // groupBox1
             // 
@@ -206,7 +180,7 @@
             this.groupBox1.Controls.Add(this.kryptonLabel4);
             this.groupBox1.Controls.Add(this.kryptonLabel5);
             this.groupBox1.Controls.Add(this.kryptonLabel6);
-            this.groupBox1.Location = new System.Drawing.Point(6, 108);
+            this.groupBox1.Location = new System.Drawing.Point(-2, 108);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(348, 327);
             this.groupBox1.TabIndex = 17;
@@ -299,7 +273,7 @@
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.kryptonLabel8);
             this.groupBox2.Controls.Add(this.kryptonLabel7);
-            this.groupBox2.Location = new System.Drawing.Point(774, 108);
+            this.groupBox2.Location = new System.Drawing.Point(1062, 108);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(372, 327);
             this.groupBox2.TabIndex = 18;
@@ -329,7 +303,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(111, 16);
+            this.textBox8.Location = new System.Drawing.Point(111, 17);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(201, 26);
             this.textBox8.TabIndex = 9;
@@ -394,28 +368,166 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(90, 454);
+            this.kryptonButton2.Location = new System.Drawing.Point(-2, 454);
             this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(182, 64);
+            this.kryptonButton2.Size = new System.Drawing.Size(127, 49);
             this.kryptonButton2.TabIndex = 31;
             this.kryptonButton2.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.kryptonButton2.Values.Text = "Add User";
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(899, 456);
+            this.kryptonButton3.Location = new System.Drawing.Point(1264, 454);
             this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(178, 62);
+            this.kryptonButton3.Size = new System.Drawing.Size(138, 49);
             this.kryptonButton3.TabIndex = 32;
             this.kryptonButton3.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.kryptonButton3.Values.Text = "Delete Users";
+            this.kryptonButton3.Values.Text = "Edit user";
+            // 
+            // kryptonBorderEdge1
+            // 
+            this.kryptonBorderEdge1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonBorderEdge1.Name = "kryptonBorderEdge1";
+            this.kryptonBorderEdge1.Size = new System.Drawing.Size(50, 1);
+            this.kryptonBorderEdge1.Text = "kryptonBorderEdge1";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(399, 108);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(226, 29);
+            this.kryptonLabel1.TabIndex = 36;
+            this.kryptonLabel1.Values.Text = "Search by name or email...";
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(631, 108);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(238, 31);
+            this.kryptonTextBox1.TabIndex = 37;
+            // 
+            // kryptonButton4
+            // 
+            this.kryptonButton4.Location = new System.Drawing.Point(903, 101);
+            this.kryptonButton4.Name = "kryptonButton4";
+            this.kryptonButton4.Size = new System.Drawing.Size(90, 38);
+            this.kryptonButton4.TabIndex = 38;
+            this.kryptonButton4.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kryptonButton4.Values.Text = "Search";
+            // 
+            // kryptonComboBox1
+            // 
+            this.kryptonComboBox1.ButtonSpecs.Add(this.buttonSpecAny1);
+            this.kryptonComboBox1.ButtonSpecs.Add(this.buttonSpecAny2);
+            this.kryptonComboBox1.ButtonSpecs.Add(this.buttonSpecAny3);
+            this.kryptonComboBox1.ButtonSpecs.Add(this.buttonSpecAny4);
+            this.kryptonComboBox1.ButtonSpecs.Add(this.buttonSpecAny5);
+            this.kryptonComboBox1.ButtonSpecs.Add(this.buttonSpecAny6);
+            this.kryptonComboBox1.DropDownWidth = 247;
+            this.kryptonComboBox1.Location = new System.Drawing.Point(430, 233);
+            this.kryptonComboBox1.Name = "kryptonComboBox1";
+            this.kryptonComboBox1.Size = new System.Drawing.Size(577, 35);
+            this.kryptonComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kryptonComboBox1.TabIndex = 39;
+            this.kryptonComboBox1.Text = "Roles";
+            this.kryptonComboBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
+            // 
+            // buttonSpecAny1
+            // 
+            this.buttonSpecAny1.Style = Krypton.Toolkit.PaletteButtonStyle.Standalone;
+            this.buttonSpecAny1.Text = "All";
+            this.buttonSpecAny1.UniqueName = "4d9e1085392944478905b782904e8997";
+            // 
+            // buttonSpecAny2
+            // 
+            this.buttonSpecAny2.Text = "Viewer";
+            this.buttonSpecAny2.UniqueName = "3f3865193d1944589c1acece6716a802";
+            // 
+            // buttonSpecAny3
+            // 
+            this.buttonSpecAny3.Text = "Editor";
+            this.buttonSpecAny3.UniqueName = "1b9f144b2eec4244836aa7a70f870b8e";
+            // 
+            // buttonSpecAny4
+            // 
+            this.buttonSpecAny4.Text = "Manger";
+            this.buttonSpecAny4.UniqueName = "e75cf7f32b864fda859beeadfd74e020";
+            // 
+            // buttonSpecAny5
+            // 
+            this.buttonSpecAny5.Text = "Admin";
+            this.buttonSpecAny5.UniqueName = "757b3b7c64794e5abdd7f220980f2aa5";
+            // 
+            // buttonSpecAny6
+            // 
+            this.buttonSpecAny6.Text = "Contractor";
+            this.buttonSpecAny6.UniqueName = "1109d71aeb6d4253a4809ba9d1a0078b";
+            // 
+            // kryptonComboBox2
+            // 
+            this.kryptonComboBox2.ButtonSpecs.Add(this.buttonSpecAny7);
+            this.kryptonComboBox2.ButtonSpecs.Add(this.buttonSpecAny8);
+            this.kryptonComboBox2.ButtonSpecs.Add(this.buttonSpecAny9);
+            this.kryptonComboBox2.ButtonSpecs.Add(this.buttonSpecAny10);
+            this.kryptonComboBox2.DropDownWidth = 333;
+            this.kryptonComboBox2.Location = new System.Drawing.Point(430, 351);
+            this.kryptonComboBox2.Name = "kryptonComboBox2";
+            this.kryptonComboBox2.Size = new System.Drawing.Size(577, 30);
+            this.kryptonComboBox2.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kryptonComboBox2.TabIndex = 40;
+            this.kryptonComboBox2.Text = "Account Status";
+            // 
+            // buttonSpecAny7
+            // 
+            this.buttonSpecAny7.Text = "All";
+            this.buttonSpecAny7.UniqueName = "e7935b36631a4586aa3cf2ddb478d12e";
+            // 
+            // buttonSpecAny8
+            // 
+            this.buttonSpecAny8.Text = "Active";
+            this.buttonSpecAny8.UniqueName = "5c009b73cf9b460d912cb07a4e10c85e";
+            // 
+            // buttonSpecAny9
+            // 
+            this.buttonSpecAny9.Text = "Disabled";
+            this.buttonSpecAny9.UniqueName = "dc4604610fe44caea38351521afd6edd";
+            // 
+            // buttonSpecAny10
+            // 
+            this.buttonSpecAny10.Text = "Expired";
+            this.buttonSpecAny10.UniqueName = "d8c72805c2ce4b3e8604729b51cc052f";
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(477, 10);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(98, 32);
+            this.kryptonButton1.TabIndex = 19;
+            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kryptonButton1.Values.Text = "Search";
+            // 
+            // kryptonButton5
+            // 
+            this.kryptonButton5.Location = new System.Drawing.Point(173, 454);
+            this.kryptonButton5.Name = "kryptonButton5";
+            this.kryptonButton5.Size = new System.Drawing.Size(139, 49);
+            this.kryptonButton5.TabIndex = 41;
+            this.kryptonButton5.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kryptonButton5.Values.Text = "Delete user";
             // 
             // UserManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1158, 764);
+            this.ClientSize = new System.Drawing.Size(1431, 764);
+            this.Controls.Add(this.kryptonButton5);
+            this.Controls.Add(this.kryptonComboBox2);
+            this.Controls.Add(this.kryptonComboBox1);
+            this.Controls.Add(this.kryptonButton4);
+            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.kryptonLabel1);
+            this.Controls.Add(this.kryptonBorderEdge1);
             this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.groupBox2);
@@ -423,9 +535,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label1);
             this.Name = "UserManagementForm";
             this.Text = "UserManagementForm";
             this.panel1.ResumeLayout(false);
@@ -435,6 +545,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,11 +556,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -466,7 +575,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private Krypton.Toolkit.KryptonLabel kryptonLabel4;
@@ -479,5 +587,23 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel11;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonButton kryptonButton3;
+        private Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonButton kryptonButton4;
+        private Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny1;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny2;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny3;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny4;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny5;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny6;
+        private Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny7;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny8;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny9;
+        private Krypton.Toolkit.ButtonSpecAny buttonSpecAny10;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonButton kryptonButton5;
     }
 }

@@ -56,5 +56,10 @@ namespace Autodesk_Applicatin
         {
 
         }
+
+        private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

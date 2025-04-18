@@ -273,6 +273,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ModeManagementForm";
             this.Text = "UploadForm";
+            this.Load += new System.EventHandler(this.ModeManagementForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
