@@ -377,7 +377,7 @@
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(1264, 454);
+            this.kryptonButton3.Location = new System.Drawing.Point(1197, 454);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(138, 49);
             this.kryptonButton3.TabIndex = 32;
