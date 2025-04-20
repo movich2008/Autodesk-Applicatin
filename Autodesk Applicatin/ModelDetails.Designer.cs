@@ -47,7 +47,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -55,7 +54,11 @@
             this.dtpModifiedOn = new System.Windows.Forms.DateTimePicker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonDropButton1 = new Krypton.Toolkit.KryptonDropButton();
+            this.kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picBxPreview)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,7 +79,7 @@
             // 
             this.TxtbxModelName.AutoSize = true;
             this.TxtbxModelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtbxModelName.Location = new System.Drawing.Point(15, 152);
+            this.TxtbxModelName.Location = new System.Drawing.Point(-1, 127);
             this.TxtbxModelName.Name = "TxtbxModelName";
             this.TxtbxModelName.Size = new System.Drawing.Size(123, 25);
             this.TxtbxModelName.TabIndex = 1;
@@ -86,7 +89,7 @@
             // 
             this.TxtbxFileFormat.AutoSize = true;
             this.TxtbxFileFormat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtbxFileFormat.Location = new System.Drawing.Point(20, 216);
+            this.TxtbxFileFormat.Location = new System.Drawing.Point(-1, 170);
             this.TxtbxFileFormat.Name = "TxtbxFileFormat";
             this.TxtbxFileFormat.Size = new System.Drawing.Size(109, 25);
             this.TxtbxFileFormat.TabIndex = 3;
@@ -96,7 +99,7 @@
             // 
             this.txtbxCreatedOn.AutoSize = true;
             this.txtbxCreatedOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxCreatedOn.Location = new System.Drawing.Point(15, 265);
+            this.txtbxCreatedOn.Location = new System.Drawing.Point(2, 214);
             this.txtbxCreatedOn.Name = "txtbxCreatedOn";
             this.txtbxCreatedOn.Size = new System.Drawing.Size(109, 25);
             this.txtbxCreatedOn.TabIndex = 4;
@@ -106,7 +109,7 @@
             // 
             this.txtvxModifiedOn.AutoSize = true;
             this.txtvxModifiedOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvxModifiedOn.Location = new System.Drawing.Point(11, 318);
+            this.txtvxModifiedOn.Location = new System.Drawing.Point(-1, 267);
             this.txtvxModifiedOn.Name = "txtvxModifiedOn";
             this.txtvxModifiedOn.Size = new System.Drawing.Size(118, 25);
             this.txtvxModifiedOn.TabIndex = 5;
@@ -116,7 +119,7 @@
             // 
             this.txtbxDimensions.AutoSize = true;
             this.txtbxDimensions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxDimensions.Location = new System.Drawing.Point(15, 385);
+            this.txtbxDimensions.Location = new System.Drawing.Point(3, 322);
             this.txtbxDimensions.Name = "txtbxDimensions";
             this.txtbxDimensions.Size = new System.Drawing.Size(114, 25);
             this.txtbxDimensions.TabIndex = 6;
@@ -124,7 +127,7 @@
             // 
             // txtBoxFirstName
             // 
-            this.txtBoxFirstName.Location = new System.Drawing.Point(149, 152);
+            this.txtBoxFirstName.Location = new System.Drawing.Point(134, 128);
             this.txtBoxFirstName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(254, 26);
@@ -132,7 +135,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(149, 384);
+            this.textBox6.Location = new System.Drawing.Point(125, 323);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(254, 26);
@@ -140,7 +143,7 @@
             // 
             // picBxPreview
             // 
-            this.picBxPreview.Location = new System.Drawing.Point(632, 127);
+            this.picBxPreview.Location = new System.Drawing.Point(644, 128);
             this.picBxPreview.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.picBxPreview.Name = "picBxPreview";
             this.picBxPreview.Size = new System.Drawing.Size(382, 347);
@@ -152,7 +155,7 @@
             this.txtbxSaveDetails.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtbxSaveDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxSaveDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtbxSaveDetails.Location = new System.Drawing.Point(168, 507);
+            this.txtbxSaveDetails.Location = new System.Drawing.Point(149, 640);
             this.txtbxSaveDetails.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtbxSaveDetails.Name = "txtbxSaveDetails";
             this.txtbxSaveDetails.Size = new System.Drawing.Size(165, 55);
@@ -266,8 +269,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.kryptonButton1);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.maskedTextBox2);
             this.panel2.Controls.Add(this.label17);
@@ -276,17 +277,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1035, 74);
             this.panel2.TabIndex = 17;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(829, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 37);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "🇬🇧";
             // 
             // pictureBox1
             // 
@@ -321,20 +311,20 @@
             // 
             this.dtpCreatedOn.CustomFormat = "dd-MM-yyy";
             this.dtpCreatedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCreatedOn.Location = new System.Drawing.Point(149, 265);
+            this.dtpCreatedOn.Location = new System.Drawing.Point(133, 214);
             this.dtpCreatedOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpCreatedOn.Name = "dtpCreatedOn";
-            this.dtpCreatedOn.Size = new System.Drawing.Size(229, 26);
+            this.dtpCreatedOn.Size = new System.Drawing.Size(255, 26);
             this.dtpCreatedOn.TabIndex = 18;
             // 
             // dtpModifiedOn
             // 
             this.dtpModifiedOn.CustomFormat = "dd-MM-yyy";
             this.dtpModifiedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpModifiedOn.Location = new System.Drawing.Point(149, 318);
+            this.dtpModifiedOn.Location = new System.Drawing.Point(133, 267);
             this.dtpModifiedOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpModifiedOn.Name = "dtpModifiedOn";
-            this.dtpModifiedOn.Size = new System.Drawing.Size(229, 26);
+            this.dtpModifiedOn.Size = new System.Drawing.Size(255, 26);
             this.dtpModifiedOn.TabIndex = 18;
             // 
             // openFileDialog1
@@ -344,19 +334,52 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(149, 213);
+            this.comboBox1.Location = new System.Drawing.Point(125, 167);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 28);
+            this.comboBox1.Size = new System.Drawing.Size(263, 28);
             this.comboBox1.TabIndex = 19;
             // 
-            // kryptonButton1
+            // kryptonTextBox1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(918, 0);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(117, 74);
-            this.kryptonButton1.TabIndex = 17;
-            this.kryptonButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.kryptonButton1.Values.Text = "Log In";
+            this.kryptonTextBox1.Location = new System.Drawing.Point(163, 377);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(151, 32);
+            this.kryptonTextBox1.TabIndex = 20;
+            this.kryptonTextBox1.Text = "Tags";
+            // 
+            // kryptonDropButton1
+            // 
+            this.kryptonDropButton1.Location = new System.Drawing.Point(109, 429);
+            this.kryptonDropButton1.Name = "kryptonDropButton1";
+            this.kryptonDropButton1.Size = new System.Drawing.Size(255, 29);
+            this.kryptonDropButton1.TabIndex = 21;
+            this.kryptonDropButton1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.kryptonDropButton1.Values.Text = "Approval status";
+            // 
+            // kryptonTextBox2
+            // 
+            this.kryptonTextBox2.Location = new System.Drawing.Point(134, 481);
+            this.kryptonTextBox2.Multiline = true;
+            this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.Size = new System.Drawing.Size(194, 35);
+            this.kryptonTextBox2.TabIndex = 22;
+            this.kryptonTextBox2.Text = "Manager Comments";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(175, 538);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(124, 29);
+            this.kryptonLabel1.TabIndex = 23;
+            this.kryptonLabel1.Values.Text = "File Size: 5MB";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(175, 583);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(124, 29);
+            this.kryptonLabel2.TabIndex = 24;
+            this.kryptonLabel2.Values.Text = "File Type: .obj";
             // 
             // ModelDetails
             // 
@@ -364,6 +387,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1038, 690);
+            this.Controls.Add(this.kryptonLabel2);
+            this.Controls.Add(this.kryptonLabel1);
+            this.Controls.Add(this.kryptonTextBox2);
+            this.Controls.Add(this.kryptonDropButton1);
+            this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dtpModifiedOn);
             this.Controls.Add(this.dtpCreatedOn);
@@ -422,7 +450,10 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonDropButton kryptonDropButton1;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
     }
 }
