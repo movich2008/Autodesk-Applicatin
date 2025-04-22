@@ -201,7 +201,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(591, 12);
+            this.label5.Location = new System.Drawing.Point(594, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(336, 42);
             this.label5.TabIndex = 23;
@@ -209,9 +209,9 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(1039, 7);
+            this.label14.Location = new System.Drawing.Point(1051, 3);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 51);
+            this.label14.Size = new System.Drawing.Size(131, 71);
             this.label14.TabIndex = 22;
             this.label14.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.label14.Values.Text = "Log in";
@@ -273,6 +273,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ModeManagementForm";
             this.Text = "UploadForm";
+            this.Load += new System.EventHandler(this.ModeManagementForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

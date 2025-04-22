@@ -179,5 +179,9 @@ namespace Autodesk_Applicatin
             }
         }
 
+        private void pnlUserFormContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Autodesk_Applicatin
         {
             InitializeComponent();
         }
+
+        private void ModeManagementForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

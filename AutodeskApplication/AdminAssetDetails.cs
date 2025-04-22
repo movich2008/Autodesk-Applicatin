@@ -28,5 +28,10 @@ namespace AutodeskApplication
                 picAdminAssetPreview.Image = SystemIcons.Warning.ToBitmap();
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

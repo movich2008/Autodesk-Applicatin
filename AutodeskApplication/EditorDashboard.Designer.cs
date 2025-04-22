@@ -497,10 +497,10 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Controls.Add(this.label3);
-            //this.panel2.Controls.Add(this.pictureBox2);
-            //this.panel2.Controls.Add(this.label14);
-            //this.panel2.Controls.Add(this.maskedTextBox1);
-            //this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1405, 67);
@@ -637,47 +637,8 @@
             // 
             // EditorDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1751, 572);
-            this.Controls.Add(this.pnlEditor);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(1005, 675);
             this.Name = "EditorDashboard";
-            this.Text = "EditorDashboard";
-            this.Load += new System.EventHandler(this.EditorDashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelHeader)).EndInit();
-            this.kryptonPanelHeader.ResumeLayout(false);
-            this.kryptonPanelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNotificationBell)).EndInit();
-            this.pnlNotifications.ResumeLayout(false);
-            this.tableStats.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpApproved.Panel)).EndInit();
-            this.grpApproved.Panel.ResumeLayout(false);
-            this.grpApproved.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpApproved)).EndInit();
-            this.grpApproved.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpPending.Panel)).EndInit();
-            this.grpPending.Panel.ResumeLayout(false);
-            this.grpPending.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpPending)).EndInit();
-            this.grpPending.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpRejected.Panel)).EndInit();
-            this.grpRejected.Panel.ResumeLayout(false);
-            this.grpRejected.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpRejected)).EndInit();
-            this.grpRejected.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpTotalAssets.Panel)).EndInit();
-            this.grpTotalAssets.Panel.ResumeLayout(false);
-            this.grpTotalAssets.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpTotalAssets)).EndInit();
-            this.grpTotalAssets.ResumeLayout(false);
-            this.tableMainContent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAssets)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAssetViewer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlEditorButtons)).EndInit();
-            this.pnlEditorButtons.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pnlEditor)).EndInit();
-            this.pnlEditor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

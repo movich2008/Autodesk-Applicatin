@@ -50,7 +50,7 @@
             this.flowAssets.Location = new System.Drawing.Point(0, 0);
             this.flowAssets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowAssets.Name = "flowAssets";
-            this.flowAssets.Size = new System.Drawing.Size(1017, 815);
+            this.flowAssets.Size = new System.Drawing.Size(1320, 815);
             this.flowAssets.TabIndex = 1;
             this.flowAssets.Paint += new System.Windows.Forms.PaintEventHandler(this.flowAssets_Paint);
             // 
@@ -65,7 +65,7 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1255, 92);
+            this.panel1.Size = new System.Drawing.Size(1317, 92);
             this.panel1.TabIndex = 17;
             // 
             // label12
@@ -135,7 +135,7 @@
             this.Controls.Add(this.flowAssets);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminAssetControl";
-            this.Size = new System.Drawing.Size(1017, 815);
+            this.Size = new System.Drawing.Size(1320, 815);
             this.Load += new System.EventHandler(this.AdminAssetControl_Load);
             this.flowAssets.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

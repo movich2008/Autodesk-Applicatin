@@ -188,7 +188,7 @@
             // Signup
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(713, 537);
+            this.ClientSize = new System.Drawing.Size(720, 564);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtFullName);
