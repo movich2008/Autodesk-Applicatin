@@ -1,0 +1,24 @@
+﻿# =========================
+# Custom project-specific ignores
+# =========================
+
+# Ignore compiled files and build output
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.cache
+
+# Ignore real App.config (contains sensitive data like DB password)
+AutodeskApplication/App.config
+
+# Ignore temporary build artifacts
+*.log
+*.tmp
+
+# Ignore local TiDB certificate file
+*.pem

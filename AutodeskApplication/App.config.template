@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<connectionStrings>
+		<add name="MySqlConnection"
+			 connectionString="Server=YOUR_SERVER;Port=4000;Database=YOUR_DB;User ID=YOUR_USER;Password=YOUR_PASSWORD;SslMode=Required;"
+			 providerName="MySql.Data.MySqlClient"/>
+	</connectionStrings>
+</configuration>
