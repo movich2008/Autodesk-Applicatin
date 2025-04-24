@@ -497,10 +497,8 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.maskedTextBox1);
-            this.panel2.Controls.Add(this.label10);
+          
+          
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1405, 67);

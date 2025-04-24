@@ -88,7 +88,7 @@
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(305, 14);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(211, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(211, 26);
             this.maskedTextBox1.TabIndex = 8;
             // 
             // label10
@@ -124,10 +124,9 @@
             // txtFirstName
             // 
             this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.Location = new System.Drawing.Point(225, 154);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFirstName.Location = new System.Drawing.Point(282, 109);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(195, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(290, 26);
             this.txtFirstName.TabIndex = 2;
             // 
             // label3
@@ -141,60 +140,55 @@
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(255, 115);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.lblTitle.Location = new System.Drawing.Point(341, 27);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(102, 20);
+            this.lblTitle.Size = new System.Drawing.Size(149, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Values.Text = "Create New User";
+            this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTitle_Paint);
             // 
             // lblFullName
             // 
             this.lblFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFullName.Location = new System.Drawing.Point(117, 154);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(2);
+            this.lblFullName.Location = new System.Drawing.Point(146, 109);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(72, 20);
+            this.lblFullName.Size = new System.Drawing.Size(105, 29);
             this.lblFullName.TabIndex = 1;
             this.lblFullName.Values.Text = "First Name:";
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblEmail.Location = new System.Drawing.Point(117, 228);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.lblEmail.Location = new System.Drawing.Point(133, 249);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(90, 20);
+            this.lblEmail.Size = new System.Drawing.Size(131, 29);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Values.Text = "Email Address:";
             // 
             // lblPassword
             // 
             this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPassword.Location = new System.Drawing.Point(117, 268);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPassword.Location = new System.Drawing.Point(146, 316);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(65, 20);
+            this.lblPassword.Size = new System.Drawing.Size(94, 29);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Values.Text = "Password:";
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEmail.Location = new System.Drawing.Point(225, 228);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Location = new System.Drawing.Point(282, 249);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(195, 20);
+            this.txtEmail.Size = new System.Drawing.Size(290, 26);
             this.txtEmail.TabIndex = 2;
             // 
             // btnSaveUser
             // 
             this.btnSaveUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSaveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveUser.Location = new System.Drawing.Point(225, 417);
-            this.btnSaveUser.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveUser.Location = new System.Drawing.Point(282, 474);
             this.btnSaveUser.Name = "btnSaveUser";
-            this.btnSaveUser.Size = new System.Drawing.Size(195, 36);
+            this.btnSaveUser.Size = new System.Drawing.Size(270, 63);
             this.btnSaveUser.TabIndex = 7;
             this.btnSaveUser.Values.Text = "Register";
             this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
@@ -216,10 +210,9 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPassword.Location = new System.Drawing.Point(225, 268);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(282, 319);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(195, 20);
+            this.txtPassword.Size = new System.Drawing.Size(290, 26);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -227,10 +220,9 @@
             // 
             this.lblRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(117, 316);
-            this.lblRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRole.Location = new System.Drawing.Point(145, 398);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(65, 13);
+            this.lblRole.Size = new System.Drawing.Size(95, 20);
             this.lblRole.TabIndex = 5;
             this.lblRole.Text = "Select Role:";
             this.lblRole.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -239,35 +231,33 @@
             // 
             this.cmbUserRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbUserRole.FormattingEnabled = true;
-            this.cmbUserRole.Location = new System.Drawing.Point(225, 308);
-            this.cmbUserRole.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbUserRole.Location = new System.Drawing.Point(282, 390);
             this.cmbUserRole.Name = "cmbUserRole";
-            this.cmbUserRole.Size = new System.Drawing.Size(195, 21);
+            this.cmbUserRole.Size = new System.Drawing.Size(290, 28);
             this.cmbUserRole.TabIndex = 6;
             // 
             // txtLastName
             // 
             this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.Location = new System.Drawing.Point(225, 187);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLastName.Location = new System.Drawing.Point(282, 181);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(195, 20);
+            this.txtLastName.Size = new System.Drawing.Size(290, 26);
             this.txtLastName.TabIndex = 2;
             // 
             // kryptonLabel1
             // 
             this.kryptonLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonLabel1.Location = new System.Drawing.Point(118, 187);
+            this.kryptonLabel1.Location = new System.Drawing.Point(146, 181);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(71, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(103, 29);
             this.kryptonLabel1.TabIndex = 12;
             this.kryptonLabel1.Values.Text = "Last Name:";
             // 
             // lblMessage
             // 
             this.lblMessage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMessage.Location = new System.Drawing.Point(255, 40);
-            this.lblMessage.Margin = new System.Windows.Forms.Padding(2);
+            this.lblMessage.Location = new System.Drawing.Point(382, 62);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(6, 2);
             this.lblMessage.TabIndex = 1;
@@ -275,9 +265,10 @@
             // 
             // UserCreationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 509);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(858, 783);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.btnSaveUser);
@@ -291,7 +282,6 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.txtPassword);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserCreationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserCreationForm";

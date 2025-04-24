@@ -223,5 +223,10 @@ namespace AutodeskApplication
         {
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input.ToLower());
         }
+
+        private void lblTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

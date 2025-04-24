@@ -287,5 +287,10 @@ namespace AutodeskApplication
             this.Hide();
             new LoginForm().Show();
         }
+
+        private void lblPendingCount_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

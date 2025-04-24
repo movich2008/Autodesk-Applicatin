@@ -74,19 +74,18 @@ namespace AutodeskApplication
             Image image)
         {
             popup.lblAssetName.Text = "Asset Name: " + name;
-            popup.lblAssetDescription.Text = "Description: " + description;
-            popup.lblDate.Text = "Date Modified: " + date;
-            popup.lbl2dFilePath.Text = "2D File Type: " + ext2D;
-            popup.lbl3dFilePath.Text = "3D File Type: " + ext3D;
+           
+    
+           
+            
 
             if (image != null)
             {
-                popup.picAssetViewer.Image = image;
-                popup.picAssetViewer.SizeMode = PictureBoxSizeMode.StretchImage;
+               
             }
             else
             {
-                popup.picAssetViewer.Image = null;
+                
             }
         }
 
