@@ -28,5 +28,15 @@ namespace AutodeskApplication
         {
 
         }
+
+        private void kryptonLabel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
